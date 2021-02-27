@@ -1,0 +1,19 @@
+﻿l_english:
+  ceasefire:0 "Ceasefire"
+  ceasefire_end:0 "End of Ceasefire"
+  peace_war_reparations:0 "War reparations"
+  peace_war_reparations_limit:0 "Is currenly paying war reparations to no more than 2 countries"
+  peace_pay_war_reparations:0 "Paying war reparations to [From.GetNameDef]"
+  
+  OFFER_PEACE_DEAL_TITLE:0 "Offer peace deal"
+  OFFER_PEACE_DEAL_DESC:0 "Offer a peace deal to the country. Only proposals within our war score can be sent (current war score: [?Root.vp@PREV|Y0] £victory_points )"
+  CP_TAKE:0 "Take state"
+  CP_PUPPET:0 "Give to puppet state"
+  CP_DEMILITARIZE:0 "Demilitarize"
+  CP_LIBERATE:0 "Liberate / Return"
+  CP_WAR_REPERATIONS:0 "War reparations"
+  CP_DISARM:0 "Disarm nation"
+  TOTAL_COST:0 "Total cost: [?Root.pd_total_cost|Y0] £victory_points"
+
+  pd_ai_will_accept_yes:0 "§YThey will accept§!"
+  pd_ai_will_accept_no:0 "§YThey will NOT accept§!"

@@ -1,0 +1,36 @@
+defined_text = { # state
+	name = pd_offer_peace_deal_loc
+
+	text = {
+		trigger = {
+			pd_is_marked = yes
+		}
+		localization_key = "pd_offer_peace_deal_marked_entry"
+	}
+	
+	text = {
+		trigger = {
+			pd_is_invisible = yes
+		}
+		localization_key = ""
+	}
+	
+	text = {
+		localization_key = "pd_offer_peace_deal_entry"
+	}
+}
+
+defined_text = { 
+	name = pd_ai_will_accept
+
+	text = {
+		trigger = {
+			pd_ai_will_accept = yes
+		}
+		localization_key = pd_ai_will_accept_yes
+	}
+	
+	text = {
+		localization_key = pd_ai_will_accept_no
+	}
+}

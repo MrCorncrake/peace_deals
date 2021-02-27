@@ -1,15 +1,4 @@
 on_actions = {
-    on_startup = {
-        effect = {
-            random_country = {
-                limit = {
-                    is_ai = no
-                }
-                country_event = { id = plus_cs.3 }
-            }
-        }
-    }
-
     on_war_relation_added = {
         effect = {
             set_variable = { vp@FROM = 0 }

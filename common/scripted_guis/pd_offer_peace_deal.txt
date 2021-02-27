@@ -1,0 +1,108 @@
+scripted_gui = {
+	
+	pd_offer_peace_deal = {
+	
+		context_type = diplomatic_action
+		
+		window_name = "pd_offer_peace_deal"
+		
+		visible = {
+			ROOT = {
+				is_ai = no  
+			}
+		}
+		
+		dynamic_lists = {
+			# name of the grid box gui element
+			st_state_grid = {
+				array = owned_states
+				change_scope = yes
+				entry_container = "[pd_offer_peace_deal_loc]" 
+			}
+		}
+		
+		effects = {
+		
+			take_click = {
+				set_variable = { ROOT.pd_selected = 1 }
+			}
+		
+			puppet_click = {
+				set_variable = { ROOT.pd_selected = 2 }
+			}
+			
+			demilitarize_click = {
+				set_variable = { ROOT.pd_selected = 3 }
+			}
+			
+			liberate_click = {
+				set_variable = { ROOT.pd_selected = 4 }
+			}
+			
+			war_reparations_click = {
+				set_variable = { ROOT.pd_war_reparations = 1 }
+				add_war_reparations_cost = yes
+			}
+			
+			war_reparations_set_click = {
+				set_variable = { ROOT.pd_war_reparations = 0 }
+				remove_war_reparations_cost = yes
+			}
+			
+			disarm_click = {
+				set_variable = { ROOT.pd_disarm = 1 }
+				add_disarm_cost = yes
+			}
+			
+			disarm_set_click = {
+				set_variable = { ROOT.pd_disarm = 0 }
+				remove_disarm_cost = yes
+			}
+			
+			pd_mark_click = {
+				add_state_to_list = yes
+			}
+			
+			pd_unmark_click = {
+				remove_state_from_list = yes
+			}
+		}
+		
+		triggers = {
+		
+			take_selected_visible = {
+				check_variable = { ROOT.pd_selected = 1 }
+			}
+			
+			puppet_selected_visible = {
+				check_variable = { ROOT.pd_selected = 2 }
+			}
+			
+			demilitarize_selected_visible = {
+				check_variable = { ROOT.pd_selected = 3 }
+			}
+			
+			liberate_selected_visible = {
+				check_variable = { ROOT.pd_selected = 4 }
+			}
+			
+			war_reparations_set_visible = {
+				check_variable = { ROOT.pd_war_reparations = 1 }
+			}
+			
+			disarm_set_visible = {
+				check_variable = { ROOT.pd_disarm = 1 }
+			}
+			
+			accept_icon_yes_visible = {
+				pd_ai_will_accept = yes
+			}
+			
+			accept_icon_no_visible = {
+				NOT = { pd_ai_will_accept = yes }
+			}
+		}
+        
+	}
+}
+

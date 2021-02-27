@@ -1,0 +1,279 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "pd_offer_peace_deal"
+		size = { width = 527 height = 500 }
+		moveable = no
+		click_to_front = yes
+		orientation= center	
+
+		containerWindowType = {
+			name = "description"
+			position = { x = 50 y = 10 }
+			size = { width = 460 height = 150 }	
+		
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_game_settings_bg"
+			}
+			
+			instantTextboxType = {
+				name = "description_text"
+				position = { x = 15 y = 30 }
+				font = "hoi_18mbs"
+				text = "OFFER_PEACE_DEAL_DESC"
+				maxWidth = 450
+				maxHeight = 150
+				format = center					
+			}
+		}
+		
+		containerWindowType = {
+			name = "options"
+			position = { x = 35 y = 110 }
+			size = { width = 250 height = 200 }	
+
+			background = {
+				name = "Background"
+				spriteType ="GFX_tiled_window_1b_border"
+			}
+			
+			buttonType = {
+				name = "take"	
+				quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+				frame = 1
+				position = { x = 20 y = 30 }
+				font = "hoi_18mbs"
+				buttonText = "CP_TAKE"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "take_selected"	
+				quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+				frame = 2
+				position = { x = 20 y = 30 }
+				font = "hoi_18mbs"
+				buttonText = "CP_TAKE"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "puppet"	
+				quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+				frame = 1
+				position = { x = 20 y = 70 }
+				font = "hoi_18mbs"
+				buttonText = "CP_PUPPET"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "puppet_selected"	
+				quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+				frame = 2
+				position = { x = 20 y = 70 }
+				font = "hoi_18mbs"
+				buttonText = "CP_PUPPET"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "demilitarize"	
+				quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+				frame = 1
+				position = { x = 20 y = 110 }
+				font = "hoi_18mbs"
+				buttonText = "CP_DEMILITARIZE"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "demilitarize_selected"	
+				quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+				frame = 2
+				position = { x = 20 y = 110 }
+				font = "hoi_18mbs"
+				buttonText = "CP_DEMILITARIZE"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "liberate"	
+				quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+				frame = 1
+				position = { x = 20 y = 150 }
+				font = "hoi_18mbs"
+				buttonText = "CP_LIBERATE"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "liberate_selected"	
+				quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+				frame = 2
+				position = { x = 20 y = 150 }
+				font = "hoi_18mbs"
+				buttonText = "CP_LIBERATE"
+				clicksound = click_default
+			}
+			
+		}
+		
+		containerWindowType = {
+			name = "other_options"
+			position = { x = 25 y = 300 }
+			size = { width = 250 height = 150 }	
+	
+			buttonType = {
+				name = "war_reparations"	
+				quadTextureSprite ="GFX_checkbox_button_264"
+				frame = 1
+				position = { x = 0 y = 25 }
+				font = "hoi_18mbs"
+				buttonText = "CP_WAR_REPERATIONS"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "war_reparations_set"	
+				quadTextureSprite ="GFX_checkbox_button_264"
+				frame = 2
+				position = { x = 0 y = 25 }
+				font = "hoi_18mbs"
+				buttonText = "CP_WAR_REPERATIONS"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "disarm"	
+				quadTextureSprite ="GFX_checkbox_button_264"
+				frame = 1
+				position = { x = 0 y = 65 }
+				font = "hoi_18mbs"
+				buttonText = "CP_DISARM"
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "disarm_set"	
+				quadTextureSprite ="GFX_checkbox_button_264"
+				frame = 2
+				position = { x = 0 y = 65 }
+				font = "hoi_18mbs"
+				buttonText = "CP_DISARM"
+				clicksound = click_default
+			}
+			
+		}
+		
+		containerWindowType = {
+			name = "states"
+			position = { x = 300 y = 110 }
+			size = { width = 250 height = 340 }
+			margin = { top = 13 left = 13 bottom = 15 right = 25}					
+			verticalScrollbar = "right_vertical_slider"
+	
+			background = {
+				name = "Background"
+				spriteType ="GFX_tiled_window_1b_border"
+			}
+			
+			gridboxtype = {
+				name = "st_state_grid"
+				position = { x = 5 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 200 height = 35 }
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {
+			name = "total_cost"
+			position = { x = 50 y = 420 }
+			size = { width = 250 height = 30 }
+			
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_generic_text_bg_203"
+			}
+			
+			instantTextboxType = {
+				name = "title"
+				position = {x = 22 y = 4 }
+				font = "hoi_18mbs"
+				text = "TOTAL_COST"
+				maxWidth = 200
+				maxHeight = 23
+				format = left
+			}
+		}
+		
+		containerWindowType = {
+			name = "reply"
+			position = { x = 70 y = 470 }
+			size = { width = 400 height = 100 }
+		
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_diplo_response_bg"
+			}
+			
+			instantTextBoxType = {
+				name = "diplo_reply"
+				position = { x = 57 y = 5 }
+				textureFile = ""
+				font = "hoi_24header"
+				borderSize = {x = 0 y = 0}
+				text = "[pd_ai_will_accept]"	
+				maxWidth = 315
+				maxHeight = 40	
+				format = centre
+			}
+			
+			iconType = {
+				name = "accept_icon_yes"
+				position = { x = 350 y = 10 }
+				quadTextureSprite ="GFX_accept_decline_icon"
+				frame = 2
+			}
+			
+			iconType = {
+				name = "accept_icon_no"
+				position = { x = 350 y = 10 }
+				quadTextureSprite ="GFX_accept_decline_icon"
+				frame = 1
+			}
+		}
+		
+	}
+	
+	containerWindowType = {
+		name = "pd_offer_peace_deal_entry"
+		size = { width = 200 height = 30 }
+		
+		buttonType = {
+			name = "pd_mark"	
+			quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+			frame = 1
+			font = "hoi_18mbs"
+			buttonText = "[This.GetName]"
+			clicksound = click_default
+		}
+	}
+	
+	containerWindowType = {
+		name = "pd_offer_peace_deal_marked_entry"
+		size = { width = 200 height = 30 }
+		
+		buttonType = {
+			name = "pd_unmark"	
+			quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+			frame = 2
+			font = "hoi_18mbs"
+			buttonText = "[This.GetName]"
+			clicksound = click_default
+		}
+	}
+}
