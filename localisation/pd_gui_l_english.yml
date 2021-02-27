@@ -1,9 +1,5 @@
 ﻿l_english:
-  ceasefire:0 "Ceasefire"
-  ceasefire_end:0 "End of Ceasefire"
-  peace_war_reparations:0 "War reparations"
-  peace_war_reparations_limit:0 "Is currenly paying war reparations to no more than 2 countries"
-  peace_pay_war_reparations:0 "Paying war reparations to [From.GetNameDef]"
+  pd_pay_war_reparations:0 "Paying war reparations to [From.GetNameDef]"
   
   OFFER_PEACE_DEAL_TITLE:0 "Offer peace deal"
   OFFER_PEACE_DEAL_DESC:0 "Offer a peace deal to the country. Only proposals within our war score can be sent (current war score: [?Root.vp@PREV|Y0] £victory_points )"
@@ -17,3 +13,5 @@
 
   pd_ai_will_accept_yes:0 "§YThey will accept§!"
   pd_ai_will_accept_no:0 "§YThey will NOT accept§!"
+  
+  pd_waiting_response:0 "Awaiting response"

@@ -7,9 +7,7 @@ scripted_gui = {
 		window_name = "pd_offer_peace_deal"
 		
 		visible = {
-			ROOT = {
-				is_ai = no  
-			}
+			always = yes
 		}
 		
 		dynamic_lists = {
@@ -70,6 +68,18 @@ scripted_gui = {
 		
 		triggers = {
 		
+			pd_mark_click_enabled = {
+				ROOT = {
+					NOT = { has_country_flag = pd_waiting_response }
+				}
+			}
+			
+			pd_unmark_click_enabled = {
+				ROOT = {
+					NOT = { has_country_flag = pd_waiting_response }
+				}
+			}
+		
 			take_selected_visible = {
 				check_variable = { ROOT.pd_selected = 1 }
 			}
@@ -90,8 +100,33 @@ scripted_gui = {
 				check_variable = { ROOT.pd_war_reparations = 1 }
 			}
 			
+			war_reparations_click_enabled = {
+				check_variable = { wr_payments < 2 }
+				ROOT = {
+					NOT = { has_country_flag = pd_waiting_response }
+				}
+			}
+			
+			war_reparations_set_click_enabled = {
+				ROOT = {
+					NOT = { has_country_flag = pd_waiting_response }
+				}
+			}
+			
 			disarm_set_visible = {
 				check_variable = { ROOT.pd_disarm = 1 }
+			}
+			
+			disarm_click_enabled = {
+				ROOT = {
+					NOT = { has_country_flag = pd_waiting_response }
+				}
+			}
+			
+			disarm_set_click_enabled = {
+				ROOT = {
+					NOT = { has_country_flag = pd_waiting_response }
+				}
 			}
 			
 			accept_icon_yes_visible = {

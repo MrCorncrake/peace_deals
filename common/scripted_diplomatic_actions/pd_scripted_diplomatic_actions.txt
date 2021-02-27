@@ -113,11 +113,21 @@ scripted_diplomatic_actions = {
 			always = yes
 		}
 		visible = {
-			always = yes
-			#has_war_with = ROOT
+			has_war_with = ROOT
 		}
 		selectable = { 
-			always = yes
+			ROOT = { 
+				NOT = { civilwar_target = PREV }
+			}
+            
+			OR = {
+				AND = {
+					is_in_faction = yes
+					is_major = yes
+				}
+				is_in_faction = no
+			}
+			is_puppet = no
 		}
 
 		requires_acceptance = yes
@@ -127,12 +137,16 @@ scripted_diplomatic_actions = {
 		icon = 1
 
 		on_sent_effect = {
-			
+			ROOT = { set_country_flag = pd_waiting_response }
 		}
 
 		complete_effect = {
 			execute_peace_deal = yes
-			#reset_peace_deal_proposal = yes
+			ROOT = { clr_country_flag = pd_waiting_response }
+		}
+		
+		reject_effect = {
+			ROOT = { clr_country_flag = pd_waiting_response }
 		}
 		
 		send_scripted_gui = pd_offer_peace_deal
@@ -141,7 +155,13 @@ scripted_diplomatic_actions = {
 		}
 		
 		can_be_sent = { # send button will be disabled if no
-			check_variable = { ROOT.vp@PREV > ROOT.pd_total_cost }
+			OR = {
+				check_variable = { ROOT.vp@PREV > ROOT.pd_total_cost }
+				check_variable = { ROOT.vp@PREV = ROOT.pd_total_cost }
+			}
+			ROOT = {
+				NOT = { has_country_flag = pd_waiting_response }
+			}
 		}
 
 		# ai_will_do to decide if AI should send this action or not

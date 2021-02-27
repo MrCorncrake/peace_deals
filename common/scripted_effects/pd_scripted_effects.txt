@@ -271,14 +271,19 @@ remove_disarm_cost = {
 
 reset_peace_deal_proposal = {
 	ROOT = {
-		set_variable = { pd_selected = 1 }
-		set_variable = { pd_disarm = 0 }
-		set_variable = { pd_war_reparations = 0 }
-		set_variable = { pd_total_cost = 0 }
-		clear_array = pd_take_array
-		clear_array = pd_puppet_array
-		clear_array = pd_demilitarize_array
-		clear_array = pd_liberate_array
+		if = {
+			limit = {
+				NOT = { has_country_flag = pd_waiting_response }
+			}
+			set_variable = { pd_selected = 1 }
+			set_variable = { pd_disarm = 0 }
+			set_variable = { pd_war_reparations = 0 }
+			set_variable = { pd_total_cost = 0 }
+			clear_array = pd_take_array
+			clear_array = pd_puppet_array
+			clear_array = pd_demilitarize_array
+			clear_array = pd_liberate_array
+		}
 	}
 }
 
@@ -454,7 +459,7 @@ execute_peace_deal = {
 		add_to_variable = { wr_payments = 1 }
 		activate_targeted_decision = {
 			target = ROOT
-			decision = peace_pay_war_reparations
+			decision = pd_pay_war_reparations
 		}
 	}
 	if = {

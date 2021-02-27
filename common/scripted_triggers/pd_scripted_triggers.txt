@@ -14,7 +14,10 @@
 #
 
 pd_ai_will_accept = {
-	always = no
+	OR = {
+		check_variable = { ROOT.vp@PREV > ROOT.pd_total_cost }
+		check_variable = { ROOT.vp@PREV = ROOT.pd_total_cost }
+	}
 }
 
 pd_is_marked = {
