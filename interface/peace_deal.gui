@@ -258,7 +258,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_sort_button_202x29_3_frames"
 			frame = 1
 			font = "hoi_18mbs"
-			buttonText = "[This.GetName]"
+			buttonText = "[pd_state_cost]"
 			clicksound = click_default
 		}
 	}
@@ -272,7 +272,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_sort_button_202x29_3_frames"
 			frame = 2
 			font = "hoi_18mbs"
-			buttonText = "[This.GetName]"
+			buttonText = "[pd_state_refund]"
 			clicksound = click_default
 		}
 	}

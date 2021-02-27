@@ -34,3 +34,135 @@ defined_text = {
 		localization_key = pd_ai_will_accept_no
 	}
 }
+
+defined_text = { 
+	name = pd_state_cost
+
+	text = {
+		trigger = {
+			check_variable = { ROOT.pd_selected = 1 }
+			
+			set_temp_variable = { pts = THIS.state_strategic_value }
+			divide_temp_variable = { pts = 1 }
+			round_temp_variable = pts
+			clamp_temp_variable = {
+				var = pts
+				min = 1
+			}
+		}
+		localization_key = pd_state_cost_value
+	}
+	
+	text = {
+		trigger = {
+			check_variable = { ROOT.pd_selected = 2 }
+			
+			set_temp_variable = { pts = THIS.state_strategic_value }
+			divide_temp_variable = { pts = 2 }
+			round_temp_variable = pts
+			clamp_temp_variable = {
+				var = pts
+				min = 1
+			}
+		}
+		localization_key = pd_state_cost_value
+	}
+	
+	text = {
+		trigger = {
+			check_variable = { ROOT.pd_selected = 3 }
+			
+			set_temp_variable = { pts = THIS.state_strategic_value }
+			divide_temp_variable = { pts = 4 }
+			round_temp_variable = pts
+			clamp_temp_variable = {
+				var = pts
+				min = 1
+			}
+		}
+		localization_key = pd_state_cost_value
+	}
+	
+	text = {
+		trigger = {
+			check_variable = { ROOT.pd_selected = 4 }
+			
+			set_temp_variable = { pts = THIS.state_strategic_value }
+			divide_temp_variable = { pts = 3 }
+			round_temp_variable = pts
+			clamp_temp_variable = {
+				var = pts
+				min = 1
+			}
+		}
+		localization_key = pd_state_cost_value
+	}
+}
+
+defined_text = { 
+	name = pd_state_refund
+
+	text = {
+		trigger = {
+			check_variable = { ROOT.pd_selected = 1 }
+			
+			set_temp_variable = { pts = THIS.state_strategic_value }
+			divide_temp_variable = { pts = 1 }
+			round_temp_variable = pts
+			clamp_temp_variable = {
+				var = pts
+				min = 1
+			}
+			multiply_temp_variable = { pts = -1 }
+		}
+		localization_key = pd_state_refund_value
+	}
+	
+	text = {
+		trigger = {
+			check_variable = { ROOT.pd_selected = 2 }
+			
+			set_temp_variable = { pts = THIS.state_strategic_value }
+			divide_temp_variable = { pts = 2 }
+			round_temp_variable = pts
+			clamp_temp_variable = {
+				var = pts
+				min = 1
+			}
+			multiply_temp_variable = { pts = -1 }
+		}
+		localization_key = pd_state_refund_value
+	}
+	
+	text = {
+		trigger = {
+			check_variable = { ROOT.pd_selected = 3 }
+			
+			set_temp_variable = { pts = THIS.state_strategic_value }
+			divide_temp_variable = { pts = 4 }
+			round_temp_variable = pts
+			clamp_temp_variable = {
+				var = pts
+				min = 1
+			}
+			multiply_temp_variable = { pts = -1 }
+		}
+		localization_key = pd_state_refund_value
+	}
+	
+	text = {
+		trigger = {
+			check_variable = { ROOT.pd_selected = 4 }
+			
+			set_temp_variable = { pts = THIS.state_strategic_value }
+			divide_temp_variable = { pts = 3 }
+			round_temp_variable = pts
+			clamp_temp_variable = {
+				var = pts
+				min = 1
+			}
+			multiply_temp_variable = { pts = -1 }
+		}
+		localization_key = pd_state_refund_value
+	}
+}

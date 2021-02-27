@@ -39,22 +39,22 @@ scripted_gui = {
 			
 			war_reparations_click = {
 				set_variable = { ROOT.pd_war_reparations = 1 }
-				add_war_reparations_cost = yes
+				add_to_variable = { ROOT.pd_total_cost = ROOT.pd_wr_cost }
 			}
 			
 			war_reparations_set_click = {
 				set_variable = { ROOT.pd_war_reparations = 0 }
-				remove_war_reparations_cost = yes
+				subtract_from_variable = { ROOT.pd_total_cost = ROOT.pd_wr_cost }
 			}
 			
 			disarm_click = {
 				set_variable = { ROOT.pd_disarm = 1 }
-				add_disarm_cost = yes
+				add_to_variable = { ROOT.pd_total_cost = ROOT.pd_disarm_cost }
 			}
 			
 			disarm_set_click = {
 				set_variable = { ROOT.pd_disarm = 0 }
-				remove_disarm_cost = yes
+				subtract_from_variable = { ROOT.pd_total_cost = ROOT.pd_disarm_cost }
 			}
 			
 			pd_mark_click = {

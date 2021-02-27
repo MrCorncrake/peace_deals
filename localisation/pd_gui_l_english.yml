@@ -1,5 +1,6 @@
 ﻿l_english:
   pd_pay_war_reparations:0 "Paying war reparations to [From.GetNameDef]"
+  conditional_surrender:0 "Conditional surrender"
   
   OFFER_PEACE_DEAL_TITLE:0 "Offer peace deal"
   OFFER_PEACE_DEAL_DESC:0 "Offer a peace deal to the country. Only proposals within our war score can be sent (current war score: [?Root.vp@PREV|Y0] £victory_points )"
@@ -7,9 +8,12 @@
   CP_PUPPET:0 "Give to puppet state"
   CP_DEMILITARIZE:0 "Demilitarize"
   CP_LIBERATE:0 "Liberate / Return"
-  CP_WAR_REPERATIONS:0 "War reparations"
-  CP_DISARM:0 "Disarm nation"
+  CP_WAR_REPERATIONS:0 "War reparations [?Root.pd_wr_cost|Y0] £victory_points"
+  CP_DISARM:0 "Disarm nation [?Root.pd_disarm_cost|Y0] £victory_points"
   TOTAL_COST:0 "Total cost: [?Root.pd_total_cost|Y0] £victory_points"
+  
+  pd_state_cost_value:0 "[This.GetName] [?pts|Y0] £victory_points"
+  pd_state_refund_value:0 "[This.GetName] [?pts|G0] £victory_points"
 
   pd_ai_will_accept_yes:0 "§YThey will accept§!"
   pd_ai_will_accept_no:0 "§YThey will NOT accept§!"
