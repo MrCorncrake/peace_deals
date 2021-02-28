@@ -137,6 +137,29 @@ scripted_gui = {
 				NOT = { pd_ai_will_accept = yes }
 			}
 		}
+		
+		ai_enabled = {
+			#TODO
+			always = no
+        }
+		
+		#TODO
+		ai_max_weight_taken_per_test = 5
+		
+		#TODO
+		ai_weights = {
+		    pd_mark_click = {
+				ai_will_do = {
+					base = -1
+					modifier = {
+						add = 10
+						is_core_of = ROOT
+					} 
+				}
+				
+				weight = 1 
+			}
+		}
         
 	}
 }

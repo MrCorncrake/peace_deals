@@ -164,9 +164,12 @@ scripted_diplomatic_actions = {
 			}
 		}
 
-		# ai_will_do to decide if AI should send this action or not
 		ai_desire = {
 			base = -100
+			modifier = {
+				add = 200
+				pd_ai_will_offer_peace = yes
+			}
 		}
 		
 		ai_acceptance = {

@@ -13,6 +13,11 @@
 #	}
 #
 
+pd_ai_will_offer_peace = {
+	# TODO
+	always = no
+}
+
 pd_ai_will_accept = {
 	# base
 	set_temp_variable = { will_accept = -100 }
