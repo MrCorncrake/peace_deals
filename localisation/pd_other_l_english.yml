@@ -1,6 +1,5 @@
 ﻿l_english:
   pd_pay_war_reparations:0 "Paying war reparations to [From.GetNameDef]"
-  conditional_surrender:0 "Conditional surrender"
   
   OFFER_PEACE_DEAL_TITLE:0 "Offer peace deal"
   OFFER_PEACE_DEAL_DESC:0 "Offer a peace deal to the country. Only proposals within our war score can be sent (current war score: [?Root.vp@PREV|Y0] £victory_points )"
@@ -19,3 +18,13 @@
   pd_ai_will_accept_no:0 "§YThey will NOT accept§!"
   
   pd_waiting_response:0 "Awaiting response"
+  
+  base_reluctance:0 "Base reluctance"
+  close_to_surrender:0 "Close to surrender" 
+  war_support:0 "War support" 
+  stability:0 "Stability"
+  relative_war_score:0 "Relative war score"
+  strength_ratio:0 "Strength ratio"
+  is_major:0 "Major country"
+  in_faction:0 "In faction"
+  geopolitical_situation:0 "Geopolitical situation"
