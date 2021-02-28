@@ -83,15 +83,6 @@ defined_text = {
 				limit = { is_owned_and_controlled_by = THIS.owner }
 				multiply_temp_variable = { pts = 2 }
 			}
-			
-			if = {
-				limit = { is_core_of = ROOT }
-				divide_temp_variable = { pts = 2 }
-			}
-			else_if = {
-				limit = { is_claimed_by = ROOT }
-				divide_temp_variable = { pts = 1.5 }
-			}
 		}
 		localization_key = pd_state_cost_value
 	}
@@ -112,15 +103,6 @@ defined_text = {
 				limit = { is_owned_and_controlled_by = THIS.owner }
 				multiply_temp_variable = { pts = 2 }
 			}
-			
-			if = {
-				limit = { is_core_of = ROOT }
-				divide_temp_variable = { pts = 2 }
-			}
-			else_if = {
-				limit = { is_claimed_by = ROOT }
-				divide_temp_variable = { pts = 1.5 }
-			}
 		}
 		localization_key = pd_state_cost_value
 	}
@@ -140,15 +122,6 @@ defined_text = {
 			if = {
 				limit = { is_owned_and_controlled_by = THIS.owner }
 				multiply_temp_variable = { pts = 2 }
-			}
-			
-			if = {
-				limit = { is_core_of = ROOT }
-				divide_temp_variable = { pts = 2 }
-			}
-			else_if = {
-				limit = { is_claimed_by = ROOT }
-				divide_temp_variable = { pts = 1.5 }
 			}
 		}
 		localization_key = pd_state_cost_value
@@ -205,15 +178,6 @@ defined_text = {
 				limit = { is_owned_and_controlled_by = THIS.owner }
 				multiply_temp_variable = { pts = 2 }
 			}
-			
-			if = {
-				limit = { is_core_of = ROOT }
-				divide_temp_variable = { pts = 2 }
-			}
-			else_if = {
-				limit = { is_claimed_by = ROOT }
-				divide_temp_variable = { pts = 1.5 }
-			}
 		}
 		localization_key = pd_state_refund_value
 	}
@@ -235,15 +199,6 @@ defined_text = {
 				limit = { is_owned_and_controlled_by = THIS.owner }
 				multiply_temp_variable = { pts = 2 }
 			}
-			
-			if = {
-				limit = { is_core_of = ROOT }
-				divide_temp_variable = { pts = 2 }
-			}
-			else_if = {
-				limit = { is_claimed_by = ROOT }
-				divide_temp_variable = { pts = 1.5 }
-			}
 		}
 		localization_key = pd_state_refund_value
 	}
@@ -264,15 +219,6 @@ defined_text = {
 			if = {
 				limit = { is_owned_and_controlled_by = THIS.owner }
 				multiply_temp_variable = { pts = 2 }
-			}
-			
-			if = {
-				limit = { is_core_of = ROOT }
-				divide_temp_variable = { pts = 2 }
-			}
-			else_if = {
-				limit = { is_claimed_by = ROOT }
-				divide_temp_variable = { pts = 1.5 }
 			}
 		}
 		localization_key = pd_state_refund_value
