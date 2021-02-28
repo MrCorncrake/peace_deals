@@ -99,7 +99,6 @@ add_state_to_list = {
 			var = pts
 			min = 1
 		}
-		add_to_variable = { ROOT.pd_total_cost = pts } 
 	}
 	else_if = {
 		limit = {
@@ -114,7 +113,6 @@ add_state_to_list = {
 			var = pts
 			min = 1
 		}
-		add_to_variable = { ROOT.pd_total_cost = pts } 
 	}
 	else_if = {
 		limit = {
@@ -128,8 +126,7 @@ add_state_to_list = {
 		clamp_temp_variable = {
 			var = pts
 			min = 1
-		}
-		add_to_variable = { ROOT.pd_total_cost = pts } 
+		} 
 	}
 	else_if = {
 		limit = {
@@ -143,9 +140,23 @@ add_state_to_list = {
 		clamp_temp_variable = {
 			var = pts
 			min = 1
-		}
-		add_to_variable = { ROOT.pd_total_cost = pts } 
+		} 
 	}
+	# Cost modifiers
+	if = {
+		limit = { is_owned_and_controlled_by = THIS.owner }
+		multiply_temp_variable = { pts = 2 }
+	}
+	
+	if = {
+		limit = { is_core_of = ROOT }
+		divide_temp_variable = { pts = 2 }
+	}
+	else_if = {
+		limit = { is_claimed_by = ROOT }
+		divide_temp_variable = { pts = 1.5 }
+	}
+	add_to_variable = { ROOT.pd_total_cost = pts } 
 }
 
 remove_state_from_list = {
@@ -167,7 +178,6 @@ remove_state_from_list = {
 			var = pts
 			min = 1
 		}
-		subtract_from_variable = { ROOT.pd_total_cost = pts } 
 	}
 	else_if = {
 		limit = {
@@ -188,7 +198,6 @@ remove_state_from_list = {
 			var = pts
 			min = 1
 		}
-		subtract_from_variable = { ROOT.pd_total_cost = pts } 
 	}
 	else_if = {
 		limit = {
@@ -209,7 +218,6 @@ remove_state_from_list = {
 			var = pts
 			min = 1
 		}
-		subtract_from_variable = { ROOT.pd_total_cost = pts } 
 	}
 	else_if = {
 		limit = {
@@ -230,8 +238,22 @@ remove_state_from_list = {
 			var = pts
 			min = 1
 		}
-		subtract_from_variable = { ROOT.pd_total_cost = pts } 
 	}
+	# Cost modifiers
+	if = {
+		limit = { is_owned_and_controlled_by = THIS.owner }
+		multiply_temp_variable = { pts = 2 }
+	}
+	
+	if = {
+		limit = { is_core_of = ROOT }
+		divide_temp_variable = { pts = 2 }
+	}
+	else_if = {
+		limit = { is_claimed_by = ROOT }
+		divide_temp_variable = { pts = 1.5 }
+	}
+	subtract_from_variable = { ROOT.pd_total_cost = pts } 
 }
 
 execute_peace_deal = {

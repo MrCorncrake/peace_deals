@@ -49,6 +49,20 @@ defined_text = {
 				var = pts
 				min = 1
 			}
+			# Cost modifiers
+			if = {
+				limit = { is_owned_and_controlled_by = THIS.owner }
+				multiply_temp_variable = { pts = 2 }
+			}
+			
+			if = {
+				limit = { is_core_of = ROOT }
+				divide_temp_variable = { pts = 2 }
+			}
+			else_if = {
+				limit = { is_claimed_by = ROOT }
+				divide_temp_variable = { pts = 1.5 }
+			}
 		}
 		localization_key = pd_state_cost_value
 	}
@@ -63,6 +77,20 @@ defined_text = {
 			clamp_temp_variable = {
 				var = pts
 				min = 1
+			}
+			# Cost modifiers
+			if = {
+				limit = { is_owned_and_controlled_by = THIS.owner }
+				multiply_temp_variable = { pts = 2 }
+			}
+			
+			if = {
+				limit = { is_core_of = ROOT }
+				divide_temp_variable = { pts = 2 }
+			}
+			else_if = {
+				limit = { is_claimed_by = ROOT }
+				divide_temp_variable = { pts = 1.5 }
 			}
 		}
 		localization_key = pd_state_cost_value
@@ -79,6 +107,20 @@ defined_text = {
 				var = pts
 				min = 1
 			}
+			# Cost modifiers
+			if = {
+				limit = { is_owned_and_controlled_by = THIS.owner }
+				multiply_temp_variable = { pts = 2 }
+			}
+			
+			if = {
+				limit = { is_core_of = ROOT }
+				divide_temp_variable = { pts = 2 }
+			}
+			else_if = {
+				limit = { is_claimed_by = ROOT }
+				divide_temp_variable = { pts = 1.5 }
+			}
 		}
 		localization_key = pd_state_cost_value
 	}
@@ -93,6 +135,20 @@ defined_text = {
 			clamp_temp_variable = {
 				var = pts
 				min = 1
+			}
+			# Cost modifiers
+			if = {
+				limit = { is_owned_and_controlled_by = THIS.owner }
+				multiply_temp_variable = { pts = 2 }
+			}
+			
+			if = {
+				limit = { is_core_of = ROOT }
+				divide_temp_variable = { pts = 2 }
+			}
+			else_if = {
+				limit = { is_claimed_by = ROOT }
+				divide_temp_variable = { pts = 1.5 }
 			}
 		}
 		localization_key = pd_state_cost_value
@@ -114,6 +170,20 @@ defined_text = {
 				min = 1
 			}
 			multiply_temp_variable = { pts = -1 }
+			# Cost modifiers
+			if = {
+				limit = { is_owned_and_controlled_by = THIS.owner }
+				multiply_temp_variable = { pts = 2 }
+			}
+			
+			if = {
+				limit = { is_core_of = ROOT }
+				divide_temp_variable = { pts = 2 }
+			}
+			else_if = {
+				limit = { is_claimed_by = ROOT }
+				divide_temp_variable = { pts = 1.5 }
+			}
 		}
 		localization_key = pd_state_refund_value
 	}
@@ -130,6 +200,20 @@ defined_text = {
 				min = 1
 			}
 			multiply_temp_variable = { pts = -1 }
+			# Cost modifiers
+			if = {
+				limit = { is_owned_and_controlled_by = THIS.owner }
+				multiply_temp_variable = { pts = 2 }
+			}
+			
+			if = {
+				limit = { is_core_of = ROOT }
+				divide_temp_variable = { pts = 2 }
+			}
+			else_if = {
+				limit = { is_claimed_by = ROOT }
+				divide_temp_variable = { pts = 1.5 }
+			}
 		}
 		localization_key = pd_state_refund_value
 	}
@@ -146,6 +230,20 @@ defined_text = {
 				min = 1
 			}
 			multiply_temp_variable = { pts = -1 }
+			# Cost modifiers
+			if = {
+				limit = { is_owned_and_controlled_by = THIS.owner }
+				multiply_temp_variable = { pts = 2 }
+			}
+			
+			if = {
+				limit = { is_core_of = ROOT }
+				divide_temp_variable = { pts = 2 }
+			}
+			else_if = {
+				limit = { is_claimed_by = ROOT }
+				divide_temp_variable = { pts = 1.5 }
+			}
 		}
 		localization_key = pd_state_refund_value
 	}
@@ -162,6 +260,20 @@ defined_text = {
 				min = 1
 			}
 			multiply_temp_variable = { pts = -1 }
+			# Cost modifiers
+			if = {
+				limit = { is_owned_and_controlled_by = THIS.owner }
+				multiply_temp_variable = { pts = 2 }
+			}
+			
+			if = {
+				limit = { is_core_of = ROOT }
+				divide_temp_variable = { pts = 2 }
+			}
+			else_if = {
+				limit = { is_claimed_by = ROOT }
+				divide_temp_variable = { pts = 1.5 }
+			}
 		}
 		localization_key = pd_state_refund_value
 	}
