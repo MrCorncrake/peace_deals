@@ -12,7 +12,7 @@ scripted_gui = {
 		
 		dynamic_lists = {
 			# name of the grid box gui element
-			st_state_grid = {
+			pd_state_grid = {
 				array = owned_states
 				change_scope = yes
 				entry_container = "[pd_offer_peace_deal_loc]" 

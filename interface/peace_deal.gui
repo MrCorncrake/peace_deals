@@ -44,7 +44,7 @@ guiTypes = {
 				frame = 1
 				position = { x = 20 y = 30 }
 				font = "hoi_18mbs"
-				buttonText = "CP_TAKE"
+				buttonText = "PD_TAKE"
 				clicksound = click_default
 			}
 			
@@ -54,7 +54,7 @@ guiTypes = {
 				frame = 2
 				position = { x = 20 y = 30 }
 				font = "hoi_18mbs"
-				buttonText = "CP_TAKE"
+				buttonText = "PD_TAKE"
 				clicksound = click_default
 			}
 			
@@ -64,7 +64,7 @@ guiTypes = {
 				frame = 1
 				position = { x = 20 y = 70 }
 				font = "hoi_18mbs"
-				buttonText = "CP_PUPPET"
+				buttonText = "PD_PUPPET"
 				clicksound = click_default
 			}
 			
@@ -74,7 +74,7 @@ guiTypes = {
 				frame = 2
 				position = { x = 20 y = 70 }
 				font = "hoi_18mbs"
-				buttonText = "CP_PUPPET"
+				buttonText = "PD_PUPPET"
 				clicksound = click_default
 			}
 			
@@ -84,7 +84,7 @@ guiTypes = {
 				frame = 1
 				position = { x = 20 y = 110 }
 				font = "hoi_18mbs"
-				buttonText = "CP_DEMILITARIZE"
+				buttonText = "PD_DEMILITARIZE"
 				clicksound = click_default
 			}
 			
@@ -94,7 +94,7 @@ guiTypes = {
 				frame = 2
 				position = { x = 20 y = 110 }
 				font = "hoi_18mbs"
-				buttonText = "CP_DEMILITARIZE"
+				buttonText = "PD_DEMILITARIZE"
 				clicksound = click_default
 			}
 			
@@ -104,7 +104,7 @@ guiTypes = {
 				frame = 1
 				position = { x = 20 y = 150 }
 				font = "hoi_18mbs"
-				buttonText = "CP_LIBERATE"
+				buttonText = "PD_LIBERATE"
 				clicksound = click_default
 			}
 			
@@ -114,7 +114,7 @@ guiTypes = {
 				frame = 2
 				position = { x = 20 y = 150 }
 				font = "hoi_18mbs"
-				buttonText = "CP_LIBERATE"
+				buttonText = "PD_LIBERATE"
 				clicksound = click_default
 			}
 			
@@ -131,7 +131,7 @@ guiTypes = {
 				frame = 1
 				position = { x = 0 y = 25 }
 				font = "hoi_18mbs"
-				buttonText = "CP_WAR_REPERATIONS"
+				buttonText = "PD_WAR_REPERATIONS"
 				clicksound = click_default
 			}
 			
@@ -141,7 +141,7 @@ guiTypes = {
 				frame = 2
 				position = { x = 0 y = 25 }
 				font = "hoi_18mbs"
-				buttonText = "CP_WAR_REPERATIONS"
+				buttonText = "PD_WAR_REPERATIONS"
 				clicksound = click_default
 			}
 			
@@ -151,7 +151,7 @@ guiTypes = {
 				frame = 1
 				position = { x = 0 y = 65 }
 				font = "hoi_18mbs"
-				buttonText = "CP_DISARM"
+				buttonText = "PD_DISARM"
 				clicksound = click_default
 			}
 			
@@ -161,7 +161,7 @@ guiTypes = {
 				frame = 2
 				position = { x = 0 y = 65 }
 				font = "hoi_18mbs"
-				buttonText = "CP_DISARM"
+				buttonText = "PD_DISARM"
 				clicksound = click_default
 			}
 			
@@ -180,7 +180,7 @@ guiTypes = {
 			}
 			
 			gridboxtype = {
-				name = "st_state_grid"
+				name = "pd_state_grid"
 				position = { x = 5 y = 0 }
 				size = { width = 100%% height = 100%% }
 				slotsize = { width = 200 height = 35 }
@@ -274,6 +274,250 @@ guiTypes = {
 			font = "hoi_18mbs"
 			buttonText = "[pd_state_refund]"
 			clicksound = click_default
+		}
+	}
+	
+	containerWindowType = {
+		name = "pd_offer_peace_deal_receive"
+		size = { width = 527 height = 500 }
+		moveable = no
+		click_to_front = yes
+		orientation= center	
+		
+		instantTextboxType = {
+			name = "receive_text"
+			position = { x = 100 y = 20 }
+			font = "hoi_18mbs"
+			text = "PD_OFFER_PEACE_DEAL_RECEIVE"
+			maxWidth = 380
+			maxHeight = 100
+			format = center					
+		}
+		
+		containerWindowType = {
+			name = "this_flag_container"
+			position = { x = 10 y = 15 }
+			size = { width = 100 height = 100 }
+		
+			iconType = {
+				name = "this_flag"
+				quadTextureSprite = "GFX_shield_medium"
+				position = { x = 10 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			iconType = {
+				name = "flag_frame"
+				quadTextureSprite = "GFX_large_flag_frame"
+				position = { x = 5 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {
+			name = "root_flag_container"
+			position = { x = 470 y = 15 }
+			size = { width = 100 height = 100 }
+		
+			iconType = {
+				name = "root_flag"
+				quadTextureSprite = "GFX_shield_medium"
+				position = { x = 10 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			iconType = {
+				name = "flag_frame"
+				quadTextureSprite = "GFX_large_flag_frame"
+				position = { x = 5 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+		
+		# Take
+		containerWindowType = {
+			name = "take_states"
+			position = { x = 20 y = 80 }
+			size = { width = 550 height = 90 }
+	
+			instantTextboxType = {
+				name = "take_states_text"
+				position = { x = 10 y = 0 }
+				font = "hoi_18mbs"
+				text = "PD_TAKE_STATES_DESC"
+				maxWidth = 530
+				maxHeight = 20
+				format = center					
+			}
+			
+			containerWindowType = {
+				name = "take_states_grid"
+				position = { x = 0 y = 20 }
+				size = { width = 550 height = 65 }				
+				verticalScrollbar = "right_vertical_slider"
+				
+				background = {
+					name = "Background"
+					spriteType =""
+				}
+				
+				gridboxtype = {
+					name = "pd_take_states_grid"
+					position = { x = 5 y = 0 }
+					size = { width = 100%% height = 100%% }
+					slotsize = { width = 180 height = 20 }
+					max_slots_horizontal = 3
+					format = "UPPER_LEFT"
+				}
+			}
+		}
+		
+		# Puppet
+		containerWindowType = {
+			name = "puppet_states"
+			position = { x = 20 y = 170 }
+			size = { width = 550 height = 90 }
+	
+			instantTextboxType = {
+				name = "puppet_states_text"
+				position = { x = 10 y = 0 }
+				font = "hoi_18mbs"
+				text = "PD_PUPPET_STATES_DESC"
+				maxWidth = 530
+				maxHeight = 20
+				format = center					
+			}
+			
+			containerWindowType = {
+				name = "puppet_states_grid"
+				position = { x = 0 y = 20 }
+				size = { width = 550 height = 65 }				
+				verticalScrollbar = "right_vertical_slider"
+				
+				background = {
+					name = "Background"
+					spriteType =""
+				}
+				
+				gridboxtype = {
+					name = "pd_puppet_states_grid"
+					position = { x = 5 y = 0 }
+					size = { width = 100%% height = 100%% }
+					slotsize = { width = 180 height = 20 }
+					max_slots_horizontal = 3
+					format = "UPPER_LEFT"
+				}
+			}
+		}
+		
+		# Demilitarize
+		containerWindowType = {
+			name = "demilitarize_states"
+			position = { x = 20 y = 260 }
+			size = { width = 550 height = 90 }
+	
+			instantTextboxType = {
+				name = "demilitarize_states_text"
+				position = { x = 10 y = 0 }
+				font = "hoi_18mbs"
+				text = "PD_DEMILITARIZE_STATES_DESC"
+				maxWidth = 530
+				maxHeight = 20
+				format = center					
+			}
+			
+			containerWindowType = {
+				name = "demilitarize_states_grid"
+				position = { x = 0 y = 20 }
+				size = { width = 550 height = 65 }				
+				verticalScrollbar = "right_vertical_slider"
+				
+				background = {
+					name = "Background"
+					spriteType =""
+				}
+				
+				gridboxtype = {
+					name = "pd_demilitarize_states_grid"
+					position = { x = 5 y = 0 }
+					size = { width = 100%% height = 100%% }
+					slotsize = { width = 180 height = 20 }
+					max_slots_horizontal = 3
+					format = "UPPER_LEFT"
+				}
+			}
+		}
+		
+		# Liberate
+		containerWindowType = {
+			name = "liberate_states"
+			position = { x = 20 y = 350 }
+			size = { width = 550 height = 90 }
+	
+			instantTextboxType = {
+				name = "liberate_states_text"
+				position = { x = 10 y = 0 }
+				font = "hoi_18mbs"
+				text = "PD_LIBERATE_STATES_DESC"
+				maxWidth = 530
+				maxHeight = 20
+				format = center					
+			}
+			
+			containerWindowType = {
+				name = "liberate_states_grid"
+				position = { x = 0 y = 20 }
+				size = { width = 550 height = 65 }				
+				verticalScrollbar = "right_vertical_slider"
+				
+				background = {
+					name = "Background"
+					spriteType =""
+				}
+				
+				gridboxtype = {
+					name = "pd_liberate_states_grid"
+					position = { x = 5 y = 0 }
+					size = { width = 100%% height = 100%% }
+					slotsize = { width = 180 height = 20 }
+					max_slots_horizontal = 3
+					format = "UPPER_LEFT"
+				}
+			}
+		}
+		
+		instantTextboxType = {
+			name = "pd_reperations_text"
+			position = { x = 30 y = 450 }
+			font = "hoi_18mbs"
+			text = "PD_REPERATIONS_DESC"
+			maxWidth = 530
+			maxHeight = 30
+			format = center					
+		}
+		
+		instantTextboxType = {
+			name = "pd_disarm_text"
+			position = { x = 30 y = 480 }
+			font = "hoi_18mbs"
+			text = "PD_DISARM_DESC"
+			maxWidth = 530
+			maxHeight = 30
+			format = center					
+		}
+	}
+	
+	containerWindowType = {
+		name = "pd_state_list_entry"
+		size = { width = 200 height = 20 }
+		
+		instantTextboxType = {
+			name = "state_list_entry"
+			font = "hoi_18mbs"
+			text = PD_STATE_LIST_ENTRY
+			maxWidth = 180
+			maxHeight = 20
+			format = center					
 		}
 	}
 }
