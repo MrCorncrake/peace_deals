@@ -1,0 +1,39 @@
+scripted_gui = {
+	
+	pd_offer_peace_deal_receive = {
+	
+		context_type = diplomatic_action
+		
+		window_name = "pd_offer_peace_deal_receive"
+		
+		visible = {
+			always = yes
+		}
+		
+		effects = {
+		
+			
+		}
+		
+		triggers = {
+		
+			
+		}
+		
+		ai_enabled = {
+			always = no
+        }
+		
+		properties = {
+			root_flag = {
+                image = "[Root.GetFlag]"
+            }
+			
+			this_flag = {
+                image = "[This.GetFlag]"
+            }
+		}
+        
+	}
+}
+

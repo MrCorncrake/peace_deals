@@ -276,4 +276,62 @@ guiTypes = {
 			clicksound = click_default
 		}
 	}
+	
+	containerWindowType = {
+		name = "pd_offer_peace_deal_receive"
+		size = { width = 527 height = 300 }
+		moveable = no
+		click_to_front = yes
+		orientation= center	
+		
+		instantTextboxType = {
+			name = "receive_text"
+			position = { x = 50 y = 20 }
+			font = "hoi_18mbs"
+			text = "OFFER_PEACE_DEAL_RECEIVE"
+			maxWidth = 450
+			maxHeight = 150
+			format = center					
+		}
+		
+		containerWindowType = {
+			name = "this_flag_container"
+			position = { x = 10 y = 15 }
+			size = { width = 100 height = 100 }
+		
+			iconType = {
+				name = "this_flag"
+				quadTextureSprite = "GFX_shield_medium"
+				position = { x = 10 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			iconType = {
+				name = "flag_frame"
+				quadTextureSprite = "GFX_large_flag_frame"
+				position = { x = 5 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+		
+		containerWindowType = {
+			name = "root_flag_container"
+			position = { x = 470 y = 15 }
+			size = { width = 100 height = 100 }
+		
+			iconType = {
+				name = "root_flag"
+				quadTextureSprite = "GFX_shield_medium"
+				position = { x = 10 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			iconType = {
+				name = "flag_frame"
+				quadTextureSprite = "GFX_large_flag_frame"
+				position = { x = 5 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+	}
 }
