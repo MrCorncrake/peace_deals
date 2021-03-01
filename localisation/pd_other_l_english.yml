@@ -3,6 +3,7 @@
   
   OFFER_PEACE_DEAL_TITLE:0 "Offer peace deal"
   OFFER_PEACE_DEAL_DESC:0 "Offer a peace deal to the country. Only proposals within our war score can be sent (current war score: [?Root.vp@PREV|Y0] £victory_points )"
+  OFFER_PEACE_DEAL_ACTION_DESC:0 "Offer a peace deal to the country. We can offer proposal based on our war score."
   PD_TAKE:0 "Take state"
   PD_PUPPET:0 "Give to puppet state"
   PD_DEMILITARIZE:0 "Demilitarize"
