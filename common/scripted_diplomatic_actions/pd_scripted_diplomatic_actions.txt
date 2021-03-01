@@ -165,13 +165,6 @@ scripted_diplomatic_actions = {
 		}
 		
 		receive_scripted_gui = pd_offer_peace_deal_receive
-		reset_receive_effect = {
-			
-		}
-		
-		can_be_accepted = { 
-		
-		}
 
 		ai_desire = {
 			base = -100
