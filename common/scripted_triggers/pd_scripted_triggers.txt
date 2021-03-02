@@ -67,6 +67,17 @@ pd_ai_will_accept = {
 	subtract_from_temp_variable = { str = 100 }
 	add_to_temp_variable = { will_accept = str }
 	
+	# world tension (while threat < 0.2 -> 0, later -100 for each 0.1)
+	set_temp_variable = { wt = var:threat }
+	multiply_temp_variable = { wt = -1000 }
+	round_temp_variable = wt
+	add_to_temp_variable = { wt = 200 }
+	clamp_temp_variable = {
+		var = wt
+		max = 0
+	}
+	add_to_temp_variable = { will_accept = wt }
+	
 	# peace deal cost
 	subtract_from_temp_variable = { will_accept = ROOT.pd_total_cost }
 	
