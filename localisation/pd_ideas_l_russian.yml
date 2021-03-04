@@ -1,0 +1,5 @@
+﻿l_russian:
+  war_reparations:0 "Военные репарации"
+  war_reparations_desc:0 "В настоящее время эта страна выплачивает военные репарации [?war_reps_to.GetNameDef]"
+  
+  conditional_surrender:0 "Условная капитуляция"
