@@ -22,7 +22,18 @@ guiTypes = {
 			}
 			
 			buttonType = {
-				name = "tab_take"	
+				name = "pd_tab_take"	
+				quadTextureSprite ="GFX_tab_intel_ledger"
+				frame = 2
+				position = { x = 0 y = 3 }
+				font = "hoi_18mbs"
+				buttonText = "PD_TAKE_TAB"
+				clicksound = click_default
+				scale = 1.08
+			}
+			
+			buttonType = {
+				name = "pd_tab_take_active"	
 				quadTextureSprite ="GFX_tab_intel_ledger"
 				frame = 1
 				position = { x = 0 y = 3 }
@@ -33,9 +44,20 @@ guiTypes = {
 			}
 			
 			buttonType = {
-				name = "tab_give"	
+				name = "pd_tab_give"	
 				quadTextureSprite ="GFX_tab_intel_ledger"
 				frame = 2
+				position = { x = 280 y = 3 }
+				font = "hoi_18mbs"
+				buttonText = "PD_GIVE_TAB"
+				clicksound = click_default
+				scale = 1.08
+			}
+			
+			buttonType = {
+				name = "pd_tab_give_active"	
+				quadTextureSprite ="GFX_tab_intel_ledger"
+				frame = 1
 				position = { x = 280 y = 3 }
 				font = "hoi_18mbs"
 				buttonText = "PD_GIVE_TAB"
@@ -69,7 +91,7 @@ guiTypes = {
 				name = "description_text"
 				position = { x = 15 y = 30 }
 				font = "hoi_18mbs"
-				text = "OFFER_PEACE_DEAL_DESC"
+				text = "[pd_description_loc]"
 				maxWidth = 450
 				maxHeight = 150
 				format = center					
@@ -179,7 +201,7 @@ guiTypes = {
 				frame = 1
 				position = { x = 0 y = 25 }
 				font = "hoi_18mbs"
-				buttonText = "PD_WAR_REPERATIONS"
+				buttonText = "[pd_war_reperations_loc]"
 				clicksound = click_default
 			}
 			
@@ -189,7 +211,7 @@ guiTypes = {
 				frame = 2
 				position = { x = 0 y = 25 }
 				font = "hoi_18mbs"
-				buttonText = "PD_WAR_REPERATIONS"
+				buttonText = "[pd_war_reperations_loc]"
 				clicksound = click_default
 			}
 			
@@ -199,7 +221,7 @@ guiTypes = {
 				frame = 1
 				position = { x = 0 y = 65 }
 				font = "hoi_18mbs"
-				buttonText = "PD_DISARM"
+				buttonText = "[pd_disarm_loc]"
 				clicksound = click_default
 			}
 			
@@ -209,7 +231,7 @@ guiTypes = {
 				frame = 2
 				position = { x = 0 y = 65 }
 				font = "hoi_18mbs"
-				buttonText = "PD_DISARM"
+				buttonText = "[pd_disarm_loc]"
 				clicksound = click_default
 			}
 			
@@ -309,6 +331,15 @@ guiTypes = {
 			buttonText = "[pd_state_cost]"
 			clicksound = click_default
 		}
+		
+		buttonType = {
+			name = "pd_mark_give"	
+			quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+			frame = 1
+			font = "hoi_18mbs"
+			buttonText = "[pd_state_refund]"
+			clicksound = click_default
+		}
 	}
 	
 	containerWindowType = {
@@ -321,6 +352,15 @@ guiTypes = {
 			frame = 2
 			font = "hoi_18mbs"
 			buttonText = "[pd_state_refund]"
+			clicksound = click_default
+		}
+		
+		buttonType = {
+			name = "pd_unmark_give"	
+			quadTextureSprite ="GFX_sort_button_202x29_3_frames"
+			frame = 2
+			font = "hoi_18mbs"
+			buttonText = "[pd_state_cost]"
 			clicksound = click_default
 		}
 	}

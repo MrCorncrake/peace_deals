@@ -78,9 +78,29 @@ reset_peace_deal_proposal = {
 			clear_array = pd_puppet_array
 			clear_array = pd_demilitarize_array
 			clear_array = pd_liberate_array
+			clear_array = pd_state_list
 		}
-		calculate_war_reparations_cost = yes
-		calculate_disarm_cost = yes
+		if = {
+			limit = {
+				ROOT = { has_country_flag = pd_root_gives }
+			} 
+			ROOT = {
+				calculate_war_reparations_cost = yes
+				calculate_disarm_cost = yes
+			}
+			for_each_loop = {
+				array = ROOT.owned_states
+				ROOT = { add_to_array = { pd_state_list = v } }
+			}
+		}
+		else = {
+			calculate_war_reparations_cost = yes
+			calculate_disarm_cost = yes
+			for_each_loop = {
+				array = owned_states
+				ROOT = { add_to_array = { pd_state_list = v } }
+			}
+		}
 	}
 }
 
@@ -157,7 +177,13 @@ add_state_to_list = {
 		multiply_temp_variable = { pts = 2 }
 	}
 
-	add_to_variable = { ROOT.pd_total_cost = pts } 
+	if = {
+		limit = { ROOT = { has_country_flag = pd_root_gives } }
+		subtract_from_variable = { ROOT.pd_total_cost = pts } 
+	}
+	else = {
+		add_to_variable = { ROOT.pd_total_cost = pts } 
+	}
 }
 
 remove_state_from_list = {
@@ -255,7 +281,13 @@ remove_state_from_list = {
 		multiply_temp_variable = { pts = 2 }
 	}
 	
-	subtract_from_variable = { ROOT.pd_total_cost = pts } 
+	if = {
+		limit = { ROOT = { has_country_flag = pd_root_gives } }
+		add_to_variable = { ROOT.pd_total_cost = pts } 
+	}
+	else = {
+		subtract_from_variable = { ROOT.pd_total_cost = pts } 
+	} 
 }
 
 execute_peace_deal = {

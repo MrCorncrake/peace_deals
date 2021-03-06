@@ -2,14 +2,23 @@
   pd_pay_war_reparations:0 "Paying war reparations to [From.GetNameDef]"
   
   OFFER_PEACE_DEAL_TITLE:0 "Offer peace deal"
-  OFFER_PEACE_DEAL_DESC:0 "Offer a peace deal to the country. Only proposals within our war score can be sent (current war score: [?Root.vp@PREV|Y0] £victory_points )"
+  
+  pd_description_root_takes:0 "Offer a peace deal to the country. Only proposals within our war score can be sent (current war score: [?Root.vp@PREV|Y0] £victory_points )"
+  pd_description_root_gives:0 "Offer conditional surrender to the country. Only proposals within [This.GetAdjective] war score can be sent (current [This.GetAdjective] war score: [?This.vp@ROOT|Y0] £victory_points )"
+  PD_TAKE_TAB:0 "Make a demand"
+  PD_GIVE_TAB:0 "Make an offer"
+  
   OFFER_PEACE_DEAL_ACTION_DESC:0 "Offer a peace deal to the country. We can offer proposal based on our war score."
   PD_TAKE:0 "Take state"
   PD_PUPPET:0 "Give to puppet state"
   PD_DEMILITARIZE:0 "Demilitarize"
   PD_LIBERATE:0 "Liberate / Return"
-  PD_WAR_REPERATIONS:0 "War reparations [?Root.pd_wr_cost|Y0] £victory_points"
-  PD_DISARM:0 "Disarm nation [?Root.pd_disarm_cost|Y0] £victory_points"
+  
+  pd_war_reperations_root_gets:0 "War reparations [?Root.pd_wr_cost|Y0] £victory_points"
+  pd_war_reperations_root_pays:0 "War reparations §G-§![?Root.pd_wr_cost|G0] £victory_points"
+  pd_disarm_this:0 "Disarm nation [?Root.pd_disarm_cost|Y0] £victory_points"
+  pd_disarm_root:0 "Disarm nation §G-§![?Root.pd_disarm_cost|G0] £victory_points"
+  
   TOTAL_COST:0 "Total cost: [?Root.pd_total_cost|Y0] £victory_points"
   
   PD_OFFER_PEACE_DEAL_RECEIVE:0 "§Y[Root.GetName]§! has offered us the following peace deal proposal:"
