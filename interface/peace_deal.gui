@@ -1,15 +1,63 @@
 guiTypes = {
 	
+	@MAX_WIDTH = 589
+	
 	containerWindowType = {
 		name = "pd_offer_peace_deal"
-		size = { width = 527 height = 500 }
+		size = { width = @MAX_WIDTH height = 560 }
 		moveable = no
 		click_to_front = yes
 		orientation= center	
+		
+		containerWindowType = {
+			name = "tab_select"
+			position = { x = 11 y = 0 }
+			size = { width = 560 height = 250 }	
+		
+			iconType = {
+				name = "Background"
+				quadTextureSprite = "GFX_tab_diplomacy_bg"
+				position = { x = 0 y = 0 }
+				scale = 1.08
+			}
+			
+			buttonType = {
+				name = "tab_take"	
+				quadTextureSprite ="GFX_tab_intel_ledger"
+				frame = 1
+				position = { x = 0 y = 3 }
+				font = "hoi_18mbs"
+				buttonText = "PD_TAKE_TAB"
+				clicksound = click_default
+				scale = 1.08
+			}
+			
+			buttonType = {
+				name = "tab_give"	
+				quadTextureSprite ="GFX_tab_intel_ledger"
+				frame = 2
+				position = { x = 280 y = 3 }
+				font = "hoi_18mbs"
+				buttonText = "PD_GIVE_TAB"
+				clicksound = click_default
+				scale = 1.08
+			}
+		}
+		
+		containerWindowType = {
+			name = "full_tab_bg"
+			position = { x = 10 y = 42 }
+			size = { width = 564 height = 535 }	
+		
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_plain_bg"
+			}
+		}
 
 		containerWindowType = {
 			name = "description"
-			position = { x = 50 y = 10 }
+			position = { x = 50 y = 50 }
 			size = { width = 460 height = 150 }	
 		
 			background = {
@@ -30,7 +78,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "options"
-			position = { x = 35 y = 110 }
+			position = { x = 35 y = 150 }
 			size = { width = 250 height = 200 }	
 
 			background = {
@@ -122,7 +170,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "other_options"
-			position = { x = 25 y = 300 }
+			position = { x = 25 y = 340 }
 			size = { width = 250 height = 150 }	
 	
 			buttonType = {
@@ -169,7 +217,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "states"
-			position = { x = 300 y = 110 }
+			position = { x = 300 y = 150 }
 			size = { width = 250 height = 340 }
 			margin = { top = 13 left = 13 bottom = 15 right = 25}					
 			verticalScrollbar = "right_vertical_slider"
@@ -191,7 +239,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "total_cost"
-			position = { x = 50 y = 420 }
+			position = { x = 50 y = 460 }
 			size = { width = 250 height = 30 }
 			
 			background = {
@@ -212,7 +260,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "reply"
-			position = { x = 70 y = 470 }
+			position = { x = 70 y = 510 }
 			size = { width = 400 height = 100 }
 		
 			background = {
@@ -279,7 +327,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "pd_offer_peace_deal_receive"
-		size = { width = 527 height = 500 }
+		size = { width = @MAX_WIDTH height = 500 }
 		moveable = no
 		click_to_front = yes
 		orientation= center	
