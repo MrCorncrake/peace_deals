@@ -1,4 +1,4 @@
-﻿l_french:
+l_french:
   # Countries Cosmetic
   COUNTRY_subject:0 "$OVERLORDADJ$ $NONIDEOLOGY$"
   COUNTRY_subject_DEF:0 "le $OVERLORDADJ$ $NONIDEOLOGY$"
@@ -17,8 +17,8 @@
   OFFER_PEACE_DEAL_ACTION_DESC:0 "Proposer un accord de paix au pays. Nous pouvons faire une proposition en fonction de notre score de guerre."
  
   # Send peace offer gui
-  PD_TAKE_TAB:0 "Make a demand"
-  PD_GIVE_TAB:0 "Make an offer"
+  PD_TAKE_TAB:0 "Faire une demande"
+  PD_GIVE_TAB:0 "Faire une offre"
   PD_PUPPET:0 "Donner à l'État fantoche"
   PD_DEMILITARIZE:0 "Démilitariser"
   PD_LIBERATE:0 "Libérer / Restituer"
@@ -31,7 +31,7 @@
   # Scripted loc
  
   pd_description_root_takes:0 "Proposer un accord de paix au pays. Seules les propositions correspondant à notre score de guerre peuvent être envoyées (score de guerre actuel : [?Root.vp@PREV|Y0] £victory_points )"
-  pd_description_root_gives:0 "Offer conditional surrender to the country. [Root.GetName] cannot cease to exist as a result of the deal!"  
+  pd_description_root_gives:0 "Offrir une reddition conditionnelle au pays. [Root.GetName] ne peut pas cesser d'exister à la suite de l'accord !"  
   
   pd_take_state:0 "Prendre état"
   pd_give_state:0 "Donner l'état"  
@@ -48,22 +48,22 @@
   pd_ai_will_accept_yes:0 "§YIls accepteront§!"
   pd_ai_will_accept_no:0 "§YIls n'accepteront PAS§!"
   
-  pd_recieve_take_good:0 "§Y[Root.GetName]§! §Gwill give §Y[This.GetName]§! the following states:§!"
+  pd_recieve_take_good:0 "§Y[Root.GetName]§! §Gdonnera à §Y[This.GetName]§! les états suivants :§!"
   pd_recieve_take_bad:0 "§Y[Root.GetName]§! §Rs'emparera des états suivants :§!"
   
-  pd_recieve_puppet_good:0 "§Y[This.GetName]§! §Gwill puppet the following states:§!"
-  pd_recieve_puppet_bad:0 "§Y[Root.GetName]§! §Rrendra fantoches les états suivants : §!"
+  pd_recieve_puppet_good:0 "§Y[This.GetName]§! §Grendra fantoches les états suivants :§!"
+  pd_recieve_puppet_bad:0 "§Y[Root.GetName]§! §Rrendra fantoches les états suivants :§!"
   
-  pd_recieve_demilitarize_good:0 "§Y[Root.GetName]§! §Gwill demilitarize the following states:§!"
+  pd_recieve_demilitarize_good:0 "§Y[Root.GetName]§! §Gva démilitariser les états suivants :§!"
   pd_recieve_demilitarize_bad:0 "§Y[This.GetName]§! §Rallons démilitariser les états suivants :§!"
   
-  pd_recieve_liberate_good:0 "§Y[Root.GetName]§! §Gwill return/liberate the following states:§!"
+  pd_recieve_liberate_good:0 "§Y[Root.GetName]§! §Gva rendre/libérer les états suivants :§!"
   pd_recieve_liberate_bad:0 "§Y[This.GetName]§! §Rallons rendre/libérer les états suivants :§!"
   
-  pd_war_reperations_good:0 "§Y[Root.GetName]§! §Gwill pay war reperations to§! §Y[This.GetName]§!"
+  pd_war_reperations_good:0 "§Y[Root.GetName]§! §Gpayera des réparations de guerre à§! §Y[This.GetName]§!"
   pd_war_reperations_bad:0 "§Y[This.GetName]§! §Rpaierons des réparations de guerre à§! §Y[Root.GetName]§!"
   
-  pd_disarm_good:0 "§Y[Root.GetName]§! §Gwill disarm§!"
+  pd_disarm_good:0 "§Y[Root.GetName]§! §Gva désarmer§!"
   pd_disarm_bad:0 "§Y[This.GetName]§! §Rallons désarmer notre nation§!"
  
   # Other
@@ -78,5 +78,5 @@
   strength_ratio:0 "Rapport de force"
   is_major:0 "Nation majeure"
   in_faction:0 "Dans une faction"
-  proposal_cost:0 "Proposal cost"
+  proposal_cost:0 "Coût de la Proposition"
   geopolitical_situation:0 "Situation Géopolitique"

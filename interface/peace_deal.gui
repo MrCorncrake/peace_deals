@@ -608,4 +608,18 @@ guiTypes = {
 			format = center					
 		}
 	}
+	
+	containerWindowType = {
+		name = "pd_hiden_mark"
+		position = { x = 10000 y = 2 }
+
+		buttonType = {
+			name = "pd_hiden_mark_btn"
+			quadTextureSprite = "GFX_generic_text_bg_203"
+			position = { x = 0 y = 0 }
+			shortcut = "ctrl+x"
+			clicksound = click_ok
+		}
+
+	}
 }
