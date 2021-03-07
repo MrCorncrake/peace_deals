@@ -86,7 +86,7 @@ pd_ai_will_accept = {
 		limit = {
 			check_variable = { ROOT.vp@PREV < ROOT.pd_total_cost }
 		}
-		subtract_from_temp_variable = { str = 10000 }
+		subtract_from_temp_variable = { will_accept = 10000 }
 	}
 	
 	# is major
@@ -94,7 +94,7 @@ pd_ai_will_accept = {
 		limit = {
 			is_major = yes
 		}
-		subtract_from_temp_variable = { str = 200 }
+		subtract_from_temp_variable = { will_accept = 200 }
 	}
 	
 	# is in faction
@@ -102,7 +102,7 @@ pd_ai_will_accept = {
 		limit = {
 			is_in_faction = yes
 		}
-		subtract_from_temp_variable = { str = 100 }
+		subtract_from_temp_variable = { will_accept = 100 }
 	}
 	
 	# Final check
