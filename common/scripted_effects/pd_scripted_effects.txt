@@ -291,40 +291,6 @@ remove_state_from_list = {
 }
 
 execute_peace_deal = {
-	# White peace
-	if = {
-		limit = {
-			ROOT = { is_faction_leader = no }
-		}
-		white_peace = ROOT
-		set_truce = {
-			target = ROOT
-			days = 720
-		}
-	}
-	else = {
-		every_enemy_country = {
-			limit = {
-				is_in_faction_with = ROOT
-			}
-			white_peace = PREV
-			set_truce = {
-				target = PREV
-				days = 720
-			}
-		}
-	}
-	if = {
-		limit = {
-			is_faction_leader = no
-		}
-		leave_faction = yes
-		add_timed_idea = {
-			idea = conditional_surrender
-			days = 720
-		}
-	}
-	
 	# Set up scopes
 	if = {
 		limit = {
@@ -336,6 +302,47 @@ execute_peace_deal = {
 	else = {
 		set_temp_variable = { taker = ROOT }
 		set_temp_variable = { giver = THIS }
+	}
+	# White peace
+	var:giver = {
+		if = {
+			limit = {
+				var:taker = { is_faction_leader = no }
+			}
+			white_peace = var:taker
+			
+			# Can't use vars in set_truce target
+			var:taker = { 
+				var:giver = {
+					set_truce = {
+						target = PREV
+						days = 720
+					}
+				}
+			}
+		}
+		else = {
+			every_enemy_country = {
+				limit = {
+					is_in_faction_with = var:taker
+				}
+				white_peace = PREV
+				set_truce = {
+					target = PREV
+					days = 720
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_faction_leader = no
+			}
+			leave_faction = yes
+			add_timed_idea = {
+				idea = conditional_surrender
+				days = 720
+			}
+		}
 	}
 	# Deal take an effect
 	ROOT = { 

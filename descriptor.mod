@@ -1,5 +1,5 @@
 name="Peace Deals"
-version="1.0"
+version="1.1"
 tags={
 	"Utilities"
 	"Gameplay"
