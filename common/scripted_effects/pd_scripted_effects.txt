@@ -324,12 +324,25 @@ execute_peace_deal = {
 			days = 720
 		}
 	}
+	
+	# Set up scopes
+	if = {
+		limit = {
+			ROOT = { has_country_flag = pd_root_gives }
+		}
+		set_temp_variable = { taker = THIS }
+		set_temp_variable = { giver = ROOT }
+	}
+	else = {
+		set_temp_variable = { taker = ROOT }
+		set_temp_variable = { giver = THIS }
+	}
 	# Deal take an effect
 	ROOT = { 
 		for_each_scope_loop = {
 			array = pd_take_array
 			
-			ROOT = { transfer_state = PREV }
+			var:taker = { transfer_state = PREV }
 		}
 		for_each_scope_loop = {
 			array = pd_puppet_array
@@ -341,13 +354,13 @@ execute_peace_deal = {
                 limit = {
                     any_country = {
                         original_tag = var:victim
-                        is_puppet_of = ROOT
+                        is_puppet_of = var:taker
                     }
                 }
                 random_country = {
                     limit = {
                         original_tag = var:victim
-                        is_puppet_of = ROOT
+                        is_puppet_of = var:taker
                     }
                     transfer_state = var:s
                 }
@@ -357,28 +370,28 @@ execute_peace_deal = {
                     original_tag = THIS.owner
                     if = {
                         limit = {
-                            ROOT = {
+                            var:taker = {
                                 has_elections = yes
                             }
                         }
                         set_politics = {
-                            ruling_party = var:ROOT.current_party_ideology_group
+                            ruling_party = var:var:taker.current_party_ideology_group
                             elections_allowed = yes
                         }
                     }
                     else = {
                         set_politics = {
-                            ruling_party = var:ROOT.current_party_ideology_group
+                            ruling_party = var:var:taker.current_party_ideology_group
                             elections_allowed = no
                         }
                     }
                     set_political_party = {
-                        ideology = var:ROOT.current_party_ideology_group
+                        ideology = var:var:taker.current_party_ideology_group
                         popularity = 60
                     }
                     set_cosmetic_tag = THIS.owner
                     reserve_dynamic_country = yes
-                    ROOT = { puppet = PREV }
+                    var:taker = { puppet = PREV }
 					transfer_state = PREV
                 }
             }
@@ -398,7 +411,7 @@ execute_peace_deal = {
 				limit = {
 					any_country = {
 						NOT = {	original_tag = var:victim }
-						NOT = { tag = ROOT }
+						NOT = { tag = var:taker }
 						var:s = {
 							is_core_of = PREV
 						}
@@ -426,28 +439,28 @@ execute_peace_deal = {
 					transfer_state = var:s
 					if = {
 						limit = {
-							ROOT = {
+							var:taker = {
 								has_rule = can_puppet
 							}
 						}
-						ROOT = {
+						var:taker = {
 							puppet = PREV
 						}
 					}
 					if = {
 						limit = {
-							ROOT = {
+							var:taker = {
 								has_elections = yes
 							}
 						}
 						set_politics = {
-							ruling_party = var:ROOT.current_party_ideology_group
+							ruling_party = var:var:taker.current_party_ideology_group
 							elections_allowed = yes
 						}
 					}
 					else = {
 						set_politics = {
-							ruling_party = var:ROOT.current_party_ideology_group
+							ruling_party = var:var:taker.current_party_ideology_group
 							elections_allowed = no
 						}
 					}
@@ -459,23 +472,28 @@ execute_peace_deal = {
 		limit = { 
 			check_variable = { ROOT.pd_war_reparations = 1 }
 		}
-		add_to_variable = { wr_payments = 1 }
-		activate_targeted_decision = {
-			target = ROOT
-			decision = pd_pay_war_reparations
+		
+		var:giver = {
+			add_to_variable = { wr_payments = 1 }
+			activate_targeted_decision = {
+				target = var:taker
+				decision = pd_pay_war_reparations
+			}
 		}
 	}
 	if = {
 		limit = { 
 			check_variable = { ROOT.pd_disarm = 1 }
 		}
-		add_timed_idea = {
-			idea = peace_disarmed_nation
-			days = 720
-		}
-		add_timed_idea = {
-			idea = peace_civilian_economy
-			days = 720
+		var:giver = {
+			add_timed_idea = {
+				idea = peace_disarmed_nation
+				days = 720
+			}
+			add_timed_idea = {
+				idea = peace_civilian_economy
+				days = 720
+			}
 		}
 	}
 }

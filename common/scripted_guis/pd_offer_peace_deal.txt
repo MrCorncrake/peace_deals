@@ -146,6 +146,12 @@ scripted_gui = {
 			}
 			
 			# Waitng response disable
+			
+			pd_tab_give_click_enabled = {
+				ROOT = {
+					NOT = { has_country_flag = pd_waiting_response }
+				}
+			}
 		
 			pd_mark_click_enabled = {
 				ROOT = {
