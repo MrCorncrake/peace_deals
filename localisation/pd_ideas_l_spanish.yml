@@ -1,5 +1,0 @@
-﻿l_spanish:
-  war_reparations:0 "Reparaciones de guerra"
-  war_reparations_desc:0 "Este país está pagando actualmente reparaciones de guerra a [?war_reps_to.GetNameDef]"
-  
-  conditional_surrender:0 "Rendición condicional"
