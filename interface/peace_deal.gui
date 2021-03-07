@@ -114,7 +114,7 @@ guiTypes = {
 				frame = 1
 				position = { x = 20 y = 30 }
 				font = "hoi_18mbs"
-				buttonText = "PD_TAKE"
+				buttonText = "[pd_take_loc]"
 				clicksound = click_default
 			}
 			
@@ -124,7 +124,7 @@ guiTypes = {
 				frame = 2
 				position = { x = 20 y = 30 }
 				font = "hoi_18mbs"
-				buttonText = "PD_TAKE"
+				buttonText = "[pd_take_loc]"
 				clicksound = click_default
 			}
 			
@@ -374,10 +374,10 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "receive_text"
-			position = { x = 100 y = 20 }
+			position = { x = 110 y = 20 }
 			font = "hoi_18mbs"
 			text = "PD_OFFER_PEACE_DEAL_RECEIVE"
-			maxWidth = 380
+			maxWidth = 360
 			maxHeight = 100
 			format = center					
 		}
@@ -432,7 +432,7 @@ guiTypes = {
 				name = "take_states_text"
 				position = { x = 10 y = 0 }
 				font = "hoi_18mbs"
-				text = "PD_TAKE_STATES_DESC"
+				text = "[pd_recieve_take_loc]"
 				maxWidth = 530
 				maxHeight = 20
 				format = center					
@@ -470,7 +470,7 @@ guiTypes = {
 				name = "puppet_states_text"
 				position = { x = 10 y = 0 }
 				font = "hoi_18mbs"
-				text = "PD_PUPPET_STATES_DESC"
+				text = "[pd_recieve_puppet_loc]"
 				maxWidth = 530
 				maxHeight = 20
 				format = center					
@@ -508,7 +508,7 @@ guiTypes = {
 				name = "demilitarize_states_text"
 				position = { x = 10 y = 0 }
 				font = "hoi_18mbs"
-				text = "PD_DEMILITARIZE_STATES_DESC"
+				text = "[pd_recieve_demilitarize_loc]"
 				maxWidth = 530
 				maxHeight = 20
 				format = center					
@@ -546,7 +546,7 @@ guiTypes = {
 				name = "liberate_states_text"
 				position = { x = 10 y = 0 }
 				font = "hoi_18mbs"
-				text = "PD_LIBERATE_STATES_DESC"
+				text = "[pd_recieve_liberate_loc]"
 				maxWidth = 530
 				maxHeight = 20
 				format = center					
@@ -578,7 +578,7 @@ guiTypes = {
 			name = "pd_reperations_text"
 			position = { x = 30 y = 450 }
 			font = "hoi_18mbs"
-			text = "PD_REPERATIONS_DESC"
+			text = "[pd_war_reperations_recieve_loc]"
 			maxWidth = 530
 			maxHeight = 30
 			format = center					
@@ -588,7 +588,7 @@ guiTypes = {
 			name = "pd_disarm_text"
 			position = { x = 30 y = 480 }
 			font = "hoi_18mbs"
-			text = "PD_DISARM_DESC"
+			text = "[pd_disarm_recieve_loc]"
 			maxWidth = 530
 			maxHeight = 30
 			format = center					
