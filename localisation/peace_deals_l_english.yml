@@ -51,7 +51,7 @@
   pd_recieve_take_good:0 "§Y[Root.GetName]§! §Gwill give §Y[This.GetName]§! the following states:§!"
   pd_recieve_take_bad:0 "§Y[This.GetName]§! §Rwill give §Y[Root.GetName]§! the following states:§!"
   
-  pd_recieve_puppet_good:0 "§G§Y[This.GetName]§! will puppet the following states:§!"
+  pd_recieve_puppet_good:0 "§Y[This.GetName]§! §Gwill puppet the following states:§!"
   pd_recieve_puppet_bad:0 "§Y[Root.GetName]§! §Rwill puppet the following states:§!"
   
   pd_recieve_demilitarize_good:0 "§Y[Root.GetName]§! §Gwill demilitarize the following states:§!"

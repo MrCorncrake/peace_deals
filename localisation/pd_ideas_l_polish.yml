@@ -1,5 +1,0 @@
-﻿l_polish:
-  war_reparations:0 "Reparacje wojenne"
-  war_reparations_desc:0 "Ten kraj płaci reparacje wojenne do [?war_reps_to.GetNameDef]"
-  
-  conditional_surrender:0 "Warunkowa kapitulacja "
