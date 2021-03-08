@@ -17,8 +17,8 @@
   OFFER_PEACE_DEAL_ACTION_DESC:0 "Мы можем предложить предложение, основанное на нашем боевом счете.."
   
   # Send peace offer gui
-  PD_TAKE_TAB:0 "Make a demand"
-  PD_GIVE_TAB:0 "Make an offer"
+  PD_TAKE_TAB:0 "предъявлять требование"
+  PD_GIVE_TAB:0 "Сделать предложение"
   PD_PUPPET:0 "Придание марионеточного состояния"
   PD_DEMILITARIZE:0 "Демилитаризировать"
   PD_LIBERATE:0 "Разблокировка / Возврат"
@@ -31,10 +31,10 @@
   # Scripted loc
  
   pd_description_root_takes:0 "Предложите стране мирное соглашение. Предложения могут быть представлены только в пределах нашего военного счета. (Текущий военный рейтинг: [?Root.vp@PREV|Y0] £victory_points )"
-  pd_description_root_gives:0 "Offer conditional surrender to the country. [Root.GetName] cannot cease to exist as a result of the deal!"
+  pd_description_root_gives:0 "Предложить условную капитуляцию стране. [Root.GetName] не может перестать существовать в результате сделки!"
   
   pd_take_state:0 "Приобретение статуса"
-  pd_give_state:0 "Give state"  
+  pd_give_state:0 "Дайте состояние"  
   
   pd_war_reperations_root_gets:0 "Военные репарации [?Root.pd_wr_cost|Y0] £victory_points"
   pd_war_reperations_root_pays:0 "Военные репарации §G-§![?Root.pd_wr_cost|G0] £victory_points"
@@ -48,22 +48,22 @@
   pd_ai_will_accept_yes:0 "§YОни примут§!"
   pd_ai_will_accept_no:0 "§YНЕ ПРИНИМАЕТ§!"
   
-  pd_recieve_take_good:0 "§Y[Root.GetName]§! §Gwill give §Y[This.GetName]§! the following states:§!"
+  pd_recieve_take_good:0 "§Y[Root.GetName]§! §Gдаст §Y[This.GetName]§! следующие штаты:§!"
   pd_recieve_take_bad:0 "§Y[Root.GetName]§! §Rбудут приняты следующие состояния:§!"
   
-  pd_recieve_puppet_good:0 "§Y[This.GetName]§! §Gwill puppet the following states:§!"
+  pd_recieve_puppet_good:0 "§Y[This.GetName]§! §Gбудут мариновать следующие состояния:§!"
   pd_recieve_puppet_bad:0 "§Y[Root.GetName]§! §Rбудут мариновать следующие состояния:§!"
   
-  pd_recieve_demilitarize_good:0 "§Y[Root.GetName]§! §Gwill demilitarize the following states:§!"
+  pd_recieve_demilitarize_good:0 "§Y[Root.GetName]§! §Gбудет демилитаризировать следующие состояния:§!"
   pd_recieve_demilitarize_bad:0 "§RМы демилитаризируем следующие штаты:§!"
   
-  pd_recieve_liberate_good:0 "§Y[Root.GetName]§! §Gwill return/liberate the following states:§!"
+  pd_recieve_liberate_good:0 "§Y[Root.GetName]§! §Gвозвращает/освобождает следующие состояния:§!"
   pd_recieve_liberate_bad:0 "§RМы вернем/выпустим следующие состояния:§!"
   
-  pd_war_reperations_good:0 "§Y[Root.GetName]§! §Gwill pay war reperations to§! §Y[This.GetName]§!"
+  pd_war_reperations_good:0 "§Y[Root.GetName]§! §Gбудет выплачивать военные компенсации§! §Y[This.GetName]§!"
   pd_war_reperations_bad:0 "§RМы заплатим за последствия войны, чтобы§! §Y[Root.GetName]§!"
   
-  pd_disarm_good:0 "§Y[Root.GetName]§! §Gwill disarm§!"
+  pd_disarm_good:0 "§Y[Root.GetName]§! §Gразоружаться§!"
   pd_disarm_bad:0 "§RМы разорузим нашу нацию§!"
   
   # Other
@@ -78,5 +78,5 @@
   strength_ratio:0 "Коэффициент мощности"
   is_major:0 "Энергетическая страна"
   in_faction:0 "В бездействии"
-  proposal_cost:0 "Proposal cost"
+  proposal_cost:0 "Стоимость предложения"
   geopolitical_situation:0 "геополитическая ситуация"
