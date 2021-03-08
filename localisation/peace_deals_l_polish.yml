@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_polish:
   # Countries Cosmetic
   COUNTRY_subject:0 "$OVERLORDADJ$ $NONIDEOLOGY$"
   COUNTRY_subject_DEF:0 "$OVERLORDADJ$ $NONIDEOLOGY$"
@@ -40,7 +40,7 @@
   pd_war_reperations_root_pays:0 "Reparacje wojenne §G-§![?Root.pd_wr_cost|G0] £victory_points"
   
   pd_disarm_this:0 "Rozbrojenie [?Root.pd_disarm_cost|Y0] £victory_points"
-  pd_disarm_root:0 "Rozbrojenie §G-§![?Root.pd_disarm_cost|Y0] £victory_points"
+  pd_disarm_root:0 "Rozbrojenie §G-§![?Root.pd_disarm_cost|G0] £victory_points"
   
   pd_state_cost_value:0 "[This.GetName] [?pts|Y0] £victory_points"
   pd_state_refund_value:0 "[This.GetName] [?pts|G0] £victory_points"
