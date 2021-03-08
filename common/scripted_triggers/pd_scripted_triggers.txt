@@ -52,11 +52,6 @@ pd_ai_will_accept = {
 	set_temp_variable = { rvp = ROOT.vp@PREV }
 	set_temp_variable = { tvp = THIS.vp@ROOT }
 	subtract_from_temp_variable = { rvp = tvp }
-	clamp_temp_variable = {
-		var = tvp
-		min = 1
-	}
-	divide_temp_variable = { rvp = tvp }
 	round_temp_variable = rvp
 	add_to_temp_variable = { will_accept = rvp }
 			
