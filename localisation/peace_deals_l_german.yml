@@ -17,8 +17,8 @@
   OFFER_PEACE_DEAL_ACTION_DESC:0 "Diesem Land ein Friedensabkommen anbieten. Wir können einen Vorschlag basierend auf unserer Kriegsbeteiligung machen."
   
   # Send peace offer gui
-  PD_TAKE_TAB:0 "Nachfrage" 
-  PD_GIVE_TAB:0 "Angebot"
+  PD_TAKE_TAB:0 "Forderung stellen" 
+  PD_GIVE_TAB:0 "Angebot machen"
   PD_PUPPET:0 "Zur Marionette machen"
   PD_DEMILITARIZE:0 "Entmilitarisieren"
   PD_LIBERATE:0 "Befreien/zurückgeben"
