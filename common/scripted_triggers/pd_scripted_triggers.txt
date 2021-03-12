@@ -104,6 +104,74 @@ pd_ai_will_accept = {
 	check_variable = { will_accept > 0 }
 }
 
+pd_calculate_province_cost = {
+	if = {
+		limit = {
+			check_variable = { ROOT.pd_selected = 1 }
+		}
+		# Calculate cost
+		set_temp_variable = { pts = THIS.state_strategic_value }
+		round_temp_variable = pts
+		clamp_temp_variable = {
+			var = pts
+			min = 1
+		}
+		# Cost modifiers
+		if = {
+			limit = { is_core_of = ROOT }
+			divide_temp_variable = { pts = 2 }
+		}
+		else_if = {
+			limit = { is_claimed_by = ROOT }
+			divide_temp_variable = { pts = 1.5 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { ROOT.pd_selected = 2 }
+		}
+		# Calculate cost
+		set_temp_variable = { pts = THIS.state_strategic_value }
+		divide_temp_variable = { pts = 2 }
+		round_temp_variable = pts
+		clamp_temp_variable = {
+			var = pts
+			min = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { ROOT.pd_selected = 3 }
+		}
+		# Calculate cost
+		set_temp_variable = { pts = THIS.state_strategic_value }
+		divide_temp_variable = { pts = 4 }
+		round_temp_variable = pts
+		clamp_temp_variable = {
+			var = pts
+			min = 1
+		} 
+	}
+	else_if = {
+		limit = {
+			check_variable = { ROOT.pd_selected = 4 }
+		}
+		# Calculate cost
+		set_temp_variable = { pts = THIS.state_strategic_value }
+		divide_temp_variable = { pts = 3 }
+		round_temp_variable = pts
+		clamp_temp_variable = {
+			var = pts
+			min = 1
+		} 
+	}
+	if = {
+		limit = { is_owned_and_controlled_by = THIS.owner }
+		multiply_temp_variable = { pts = 2 }
+	}
+	always = yes
+}
+
 pd_is_marked = {
 	OR = {
 		AND = {

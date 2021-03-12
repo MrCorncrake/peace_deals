@@ -112,73 +112,32 @@ add_state_to_list = {
 		ROOT = { 
 			add_to_array = { pd_take_array = PREV } 
 		}
-		# add to total cost
-		set_temp_variable = { pts = THIS.state_strategic_value }
-		round_temp_variable = pts
-		clamp_temp_variable = {
-			var = pts
-			min = 1
-		}
-		# Cost modifiers
-		if = {
-			limit = { is_core_of = ROOT }
-			divide_temp_variable = { pts = 2 }
-		}
-		else_if = {
-			limit = { is_claimed_by = ROOT }
-			divide_temp_variable = { pts = 1.5 }
-		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ROOT.pd_selected = 2 }
 		}
 		ROOT = { add_to_array = { pd_puppet_array = PREV } }
-		# add to total cost
-		set_temp_variable = { pts = THIS.state_strategic_value }
-		divide_temp_variable = { pts = 2 }
-		round_temp_variable = pts
-		clamp_temp_variable = {
-			var = pts
-			min = 1
-		}
 	}
 	else_if = {
 		limit = {
 			check_variable = { ROOT.pd_selected = 3 }
 		}
 		ROOT = { add_to_array = { pd_demilitarize_array = PREV } }
-		# add to total cost
-		set_temp_variable = { pts = THIS.state_strategic_value }
-		divide_temp_variable = { pts = 4 }
-		round_temp_variable = pts
-		clamp_temp_variable = {
-			var = pts
-			min = 1
-		} 
+		
 	}
 	else_if = {
 		limit = {
 			check_variable = { ROOT.pd_selected = 4 }
 		}
 		ROOT = { add_to_array = { pd_liberate_array = PREV } }
-		# add to total cost
-		set_temp_variable = { pts = THIS.state_strategic_value }
-		divide_temp_variable = { pts = 3 }
-		round_temp_variable = pts
-		clamp_temp_variable = {
-			var = pts
-			min = 1
-		} 
-	}
-	# Cost modifiers
-	if = {
-		limit = { is_owned_and_controlled_by = THIS.owner }
-		multiply_temp_variable = { pts = 2 }
 	}
 
 	if = {
-		limit = { ROOT = { has_country_flag = pd_root_gives } }
+		limit = { 
+			pd_calculate_province_cost = yes
+			ROOT = { has_country_flag = pd_root_gives } 
+		}
 		subtract_from_variable = { ROOT.pd_total_cost = pts } 
 	}
 	else = {
@@ -198,22 +157,6 @@ remove_state_from_list = {
 			}
 		}
 		ROOT = { remove_from_array  = { pd_take_array = PREV } }
-		# remove from total cost
-		set_temp_variable = { pts = THIS.state_strategic_value }
-		round_temp_variable = pts
-		clamp_temp_variable = {
-			var = pts
-			min = 1
-		}
-		# Cost modifiers	
-		if = {
-			limit = { is_core_of = ROOT }
-			divide_temp_variable = { pts = 2 }
-		}
-		else_if = {
-			limit = { is_claimed_by = ROOT }
-			divide_temp_variable = { pts = 1.5 }
-		}
 	}
 	else_if = {
 		limit = {
@@ -226,14 +169,6 @@ remove_state_from_list = {
 			}
 		}
 		ROOT = { remove_from_array  = { pd_puppet_array = PREV } }
-		# remove from total cost
-		set_temp_variable = { pts = THIS.state_strategic_value }
-		divide_temp_variable = { pts = 2 }
-		round_temp_variable = pts
-		clamp_temp_variable = {
-			var = pts
-			min = 1
-		}
 	}
 	else_if = {
 		limit = {
@@ -246,14 +181,6 @@ remove_state_from_list = {
 			}
 		}
 		ROOT = { remove_from_array  = { pd_demilitarize_array = PREV } }
-		# remove from total cost
-		set_temp_variable = { pts = THIS.state_strategic_value }
-		divide_temp_variable = { pts = 4 }
-		round_temp_variable = pts
-		clamp_temp_variable = {
-			var = pts
-			min = 1
-		}
 	}
 	else_if = {
 		limit = {
@@ -266,23 +193,13 @@ remove_state_from_list = {
 			}
 		}
 		ROOT = { remove_from_array  = { pd_liberate_array = PREV } }
-		# remove from total cost
-		set_temp_variable = { pts = THIS.state_strategic_value }
-		divide_temp_variable = { pts = 3 }
-		round_temp_variable = pts
-		clamp_temp_variable = {
-			var = pts
-			min = 1
-		}
-	}
-	# Cost modifiers
-	if = {
-		limit = { is_owned_and_controlled_by = THIS.owner }
-		multiply_temp_variable = { pts = 2 }
 	}
 	
 	if = {
-		limit = { ROOT = { has_country_flag = pd_root_gives } }
+		limit = { 
+			pd_calculate_province_cost = yes
+			ROOT = { has_country_flag = pd_root_gives } 
+		}
 		add_to_variable = { ROOT.pd_total_cost = pts } 
 	}
 	else = {
