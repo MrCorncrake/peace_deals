@@ -263,11 +263,13 @@ execute_peace_deal = {
 	}
 	# Deal take an effect
 	ROOT = { 
+		# Take
 		for_each_scope_loop = {
 			array = pd_take_array
 			
 			var:taker = { transfer_state = PREV }
 		}
+		# Puppet
 		for_each_scope_loop = {
 			array = pd_puppet_array
 			
@@ -320,11 +322,13 @@ execute_peace_deal = {
                 }
             }
 		}
+		# Demilitarize
 		for_each_scope_loop = {
 			array = pd_demilitarize_array
 			
 			set_demilitarized_zone = yes
 		}
+		# Liberate
 		for_each_scope_loop = {
 			array = pd_liberate_array
 			
@@ -392,6 +396,7 @@ execute_peace_deal = {
 			}
 		}
 	}
+	# War reparations
 	if = {
 		limit = { 
 			ROOT = { has_country_flag = pd_war_reparations }
@@ -405,6 +410,7 @@ execute_peace_deal = {
 			}
 		}
 	}
+	# Disarm nation
 	if = {
 		limit = { 
 			ROOT = { has_country_flag = pd_disarm }
