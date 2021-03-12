@@ -38,11 +38,11 @@ scripted_gui = {
 		
 		triggers = {
 			pd_reperations_text_visible = {
-				check_variable = { ROOT.pd_war_reparations = 1 }
+				ROOT = { has_country_flag = pd_war_reparations }
 			}
 			
 			pd_disarm_text_visible = {
-				check_variable = { ROOT.pd_disarm = 1 }
+				ROOT = { has_country_flag = pd_disarm }
 			}
 		}
 		

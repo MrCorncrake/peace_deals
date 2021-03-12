@@ -71,9 +71,9 @@ reset_peace_deal_proposal = {
 		}
 		ROOT = { 
 			set_variable = { pd_selected = 1 }
-			set_variable = { pd_disarm = 0 }
-			set_variable = { pd_war_reparations = 0 }
 			set_variable = { pd_total_cost = 0 }
+			clr_country_flag = pd_disarm
+			clr_country_flag = pd_war_reparations
 			clear_array = pd_take_array
 			clear_array = pd_puppet_array
 			clear_array = pd_demilitarize_array
@@ -394,7 +394,7 @@ execute_peace_deal = {
 	}
 	if = {
 		limit = { 
-			check_variable = { ROOT.pd_war_reparations = 1 }
+			ROOT = { has_country_flag = pd_war_reparations }
 		}
 		
 		var:giver = {
@@ -407,7 +407,7 @@ execute_peace_deal = {
 	}
 	if = {
 		limit = { 
-			check_variable = { ROOT.pd_disarm = 1 }
+			ROOT = { has_country_flag = pd_disarm }
 		}
 		var:giver = {
 			add_timed_idea = {
