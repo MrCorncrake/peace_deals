@@ -4,6 +4,20 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					has_country_flag = pd_ai_want_peace
+					OR = {
+						var:pd_ai_want_peace_with = {
+							NOT = { pd_ai_will_offer_peace = yes }
+						}
+						NOT = { has_war_with = var:pd_ai_want_peace_with }
+					}
+				}
+				clr_country_flag = pd_ai_want_peace
+				clear_variable = pd_ai_want_peace_with 
+				reset_peace_deal_proposal = yes
+			}
+			if = {
+				limit = {
 					is_ai = yes
 					has_war = yes
 					NOT = { has_country_flag = pd_ai_want_peace }
