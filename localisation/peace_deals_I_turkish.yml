@@ -42,13 +42,13 @@ l_turkish:
   pd_disarm_this:0 "Ülkeyi silahsızlandır [?Root.pd_disarm_cost|Y0] £victory_points"
   pd_disarm_root:0 "Ülkeyi silahsızlandır §G-§![?Root.pd_disarm_cost|Y0] £victory_points"
   
-  pd_state_cost_value:0 "[This.GetName] [?pts|Y0] £victory_points"
-  pd_state_refund_value:0 "[This.GetName] [?pts|G0] £victory_points"
+  pd_state_cost_value:0 "[This.GetName] [This.Owner.GetFlag] [?pts|Y0] £victory_points"
+  pd_state_refund_value:0 "[This.GetName] [This.Owner.GetFlag] [?pts|G0] £victory_points"
 
   pd_ai_will_accept_yes:0 "§YKabul edecekler§!"
   pd_ai_will_accept_no:0 "§YKabul etmeyecekler§!"
   
-  pd_recieve_take_good:0 "§Y[Root.GetName]§! §Gverecek §Y[This.GetName]§! bu eyelatleri:§!"
+  pd_recieve_take_good:0 "§Y[This.GetName]§! §Gşu şehirleri alacak:§!"
   pd_recieve_take_bad:0 "§Y[Root.GetName]§! §Rşu şehirleri alacak:§!"
   
   pd_recieve_puppet_good:0 "§Y[This.GetName]§! §Gbu eyaletleri kukla yapacak:§!"

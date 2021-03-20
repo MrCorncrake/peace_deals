@@ -42,13 +42,13 @@
   pd_disarm_this:0 "Entwaffnen [?Root.pd_disarm_cost|Y0] £victory_points"
   pd_disarm_root:0 "Entwaffnen §G-§![?Root.pd_disarm_cost|G0] £victory_points"
  
-  pd_state_cost_value:0 "[This.GetName] [?pts|Y0] £victory_points"
-  pd_state_refund_value:0 "[This.GetName] [?pts|G0] £victory_points"
+  pd_state_cost_value:0 "[This.GetName] [This.Owner.GetFlag] [?pts|Y0] £victory_points"
+  pd_state_refund_value:0 "[This.GetName] [This.Owner.GetFlag] [?pts|G0] £victory_points"
 
   pd_ai_will_accept_yes:0 "§YSie werden akzeptieren§!"
   pd_ai_will_accept_no:0 "§YSie werden NICHT akzeptieren§!"
   
-  pd_recieve_take_good:0 "§Y[Root.GetName]§! §Gwird folgende Regionen an §Y[This.GetName]§! abtreten:§!"
+  pd_recieve_take_good:0 "§Y[This.GetName]§! §Gwird folgende Regionen annektieren:§!"
   pd_recieve_take_bad:0 "§Y[Root.GetName]§! §Rwird folgende Regionen annektieren:§!"
   
   pd_recieve_puppet_good:0 "§Y[This.GetName]§! §Gwird folgende Regionen zur Marionette machen:§!"
