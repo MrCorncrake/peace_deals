@@ -16,8 +16,38 @@
 #	}
 #
 
+#### Helper functions
+
+pd_ai_will_take = {
+	set_variable = { ROOT.pd_selected = 1 }
+	add_state_to_list = yes
+}
+
+pd_ai_will_puppet = {
+	set_variable = { ROOT.pd_selected = 2 }
+	add_state_to_list = yes
+}
+
+pd_ai_will_demilitarize = {
+	set_variable = { ROOT.pd_selected = 3 }
+	add_state_to_list = yes
+}
+
+pd_ai_will_liberate = {
+	set_variable = { ROOT.pd_selected = 4 }
+	add_state_to_list = yes
+}
+
+####
+
 pd_ai_prepare_peace_deal = {
 	# root is the sender and this is receiver
+	
+	for_each_scope_loop = {
+		array = ROOT.pd_state_list
+		
+		# TODO
+	}
 	
 	# TODO
 }
