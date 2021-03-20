@@ -92,6 +92,7 @@ reset_peace_deal_proposal = {
 				limit = {
 					has_war_with = PREV
 					OR = {
+						tag = ROOT
 						is_subject_of = ROOT
 						AND = {
 							ROOT = { is_faction_leader = yes }
@@ -125,6 +126,7 @@ reset_peace_deal_proposal = {
 				limit = {
 					has_war_with = ROOT
 					OR = {
+						tag = PREV
 						is_subject_of = PREV
 						AND = {
 							PREV = { is_faction_leader = yes }
