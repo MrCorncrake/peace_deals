@@ -88,10 +88,6 @@ reset_peace_deal_proposal = {
 				calculate_war_reparations_cost = yes
 				calculate_disarm_cost = yes
 			}
-			for_each_loop = {
-				array = ROOT.owned_states
-				ROOT = { add_to_array = { pd_state_list = v } }
-			}
 			every_country = {
 				limit = {
 					has_war_with = PREV
@@ -105,17 +101,26 @@ reset_peace_deal_proposal = {
 				}
 				for_each_loop = {
 					array = owned_states
-					ROOT = { add_to_array = { pd_state_list = v } }
+					if = {
+						limit = {
+							OR = {
+								controls_state = v
+								ROOT = { controls_state = v }
+								any_country = {
+									is_in_faction_with = THIS
+									has_war_with = ROOT
+									controls_state = v
+								}
+							}
+						}
+						ROOT = { add_to_array = { pd_state_list = v } }
+					}
 				}
 			}
 		}
 		else = {
 			calculate_war_reparations_cost = yes
 			calculate_disarm_cost = yes
-			for_each_loop = {
-				array = owned_states
-				ROOT = { add_to_array = { pd_state_list = v } }
-			}
 			every_country = {
 				limit = {
 					has_war_with = ROOT
@@ -129,7 +134,20 @@ reset_peace_deal_proposal = {
 				}
 				for_each_loop = {
 					array = owned_states
-					ROOT = { add_to_array = { pd_state_list = v } }
+					if = {
+						limit = {
+							OR = {
+								controls_state = v
+								ROOT = { controls_state = v }
+								any_country = {
+									is_in_faction_with = ROOT
+									has_war_with = PREV
+									controls_state = v
+								}
+							}
+						}
+						ROOT = { add_to_array = { pd_state_list = v } }
+					}
 				}
 			}
 		}
