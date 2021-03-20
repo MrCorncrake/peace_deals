@@ -1,4 +1,28 @@
 on_actions = {
+	
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = yes
+					has_war = yes
+					NOT = { has_country_flag = pd_ai_want_peace }
+				}
+				random_enemy_country = {
+					limit = {
+						pd_ai_will_offer_peace = yes
+					}
+					reset_peace_deal_proposal = yes
+					pd_ai_prepare_peace_deal = yes
+					ROOT = {
+						set_country_flag = pd_ai_want_peace
+						set_variable = { pd_ai_want_peace_with = PREV }
+					}
+				}
+			}
+		}
+	}
+
 	on_war_relation_added = {
 		effect = {
 			set_variable = { vp@FROM = 0 }
