@@ -354,6 +354,14 @@ execute_peace_deal = {
 				days = 720
 			}
 		}
+		else = {
+			every_other_country = {
+				limit = {
+					is_in_faction_with = var:giver
+				}
+				white_peace = var:taker
+			}
+		}
 	}
 	# Deal take an effect
 	ROOT = { 
