@@ -23,7 +23,8 @@ on_actions = {
 					NOT = { has_country_flag = pd_ai_want_peace }
 				}
 				random_enemy_country = {
-					limit = {
+					limit = { 
+						is_ai = yes
 						pd_ai_will_offer_peace = yes
 					}
 					reset_peace_deal_proposal = yes
